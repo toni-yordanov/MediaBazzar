@@ -15,6 +15,21 @@ namespace MediaBazzarApplication.Presentation
         public EmployeeManagerPage()
         {
             InitializeComponent();
+
+
+
+            
+
+
+
+
         }
+
+        public void GenerateEmployees()
+        {
+
+        }
+
+
     }
 }
