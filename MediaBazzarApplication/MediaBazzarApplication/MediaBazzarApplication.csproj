@@ -90,12 +90,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\DataAccess.cs" />
+    <Compile Include="DAL\DBQueries.cs" />
+    <Compile Include="DAL\DepartmentDB.cs" />
+    <Compile Include="DAL\EmployeeDB.cs" />
+    <Compile Include="Logic\Department.cs" />
     <Compile Include="Logic\Employee.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\DepartmentManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\DepartmentManager.Designer.cs">
+      <DependentUpon>DepartmentManager.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\EmployeeManagerPage.cs">
       <SubType>Form</SubType>
@@ -105,6 +115,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentation\DepartmentManager.resx">
+      <DependentUpon>DepartmentManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation\EmployeeManagerPage.resx">
       <DependentUpon>EmployeeManagerPage.cs</DependentUpon>
     </EmbeddedResource>
