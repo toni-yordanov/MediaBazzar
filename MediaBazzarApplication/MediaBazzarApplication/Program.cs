@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MediaBazzarApplication.Presentation;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,7 +18,9 @@ namespace MediaBazzarApplication
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new EmployeeManagerPage());
+            //Application.Run(new DepartmentManager());
+
         }
     }
 }

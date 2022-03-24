@@ -13,6 +13,7 @@ namespace MediaBazzarApplication
         protected MySqlCommand command;
         protected MySqlDataReader dataReader;
         protected string query = "";
+        public string Databaseconnection = "Server=studmysql01.fhict.local;Uid=dbi463896;Database=dbi463896;Pwd=VuiManqk; SSL Mode=None;";
 
         public string MessageBox { get; set; }
 

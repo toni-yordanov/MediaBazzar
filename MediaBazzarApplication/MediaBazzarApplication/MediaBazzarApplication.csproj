@@ -90,73 +90,36 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\DataAccess.cs" />
-    <Compile Include="DAL\ProductMediator.cs" />
-    <Compile Include="Enums\BoxSize.cs" />
-    <Compile Include="Enums\ProductCategory.cs" />
-    <Compile Include="Exeptions\CapacityExeption.cs" />
+    <Compile Include="DAL\DBQueries.cs" />
+    <Compile Include="DAL\DepartmentDB.cs" />
+    <Compile Include="DAL\EmployeeDB.cs" />
+    <Compile Include="Logic\Department.cs" />
+    <Compile Include="Logic\Employee.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Logic\Employee.cs" />
-    <Compile Include="Logic\Product.cs" />
-    <Compile Include="Logic\ShiftType.cs" />
-    <Compile Include="Presentation\CreateProduct.cs">
+    <Compile Include="Presentation\DepartmentManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation\CreateProduct.Designer.cs">
-      <DependentUpon>CreateProduct.cs</DependentUpon>
+    <Compile Include="Presentation\DepartmentManager.Designer.cs">
+      <DependentUpon>DepartmentManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\EditProduct.cs">
+    <Compile Include="Presentation\EmployeeManagerPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation\EditProduct.Designer.cs">
-      <DependentUpon>EditProduct.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Presentation\EmployeeManager.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentation\EmployeeManager.Designer.cs">
-      <DependentUpon>EmployeeManager.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Presentation\StockManager.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentation\StockManager.Designer.cs">
-      <DependentUpon>StockManager.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Presentation\ViewProduct.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentation\ViewProduct.Designer.cs">
-      <DependentUpon>ViewProduct.cs</DependentUpon>
+    <Compile Include="Presentation\EmployeeManagerPage.Designer.cs">
+      <DependentUpon>EmployeeManagerPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Logic\Shift.cs" />
-    <Compile Include="Service\ProductManager.cs" />
-    <Compile Include="ShiftMakingForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ShiftMakingForm.Designer.cs">
-      <DependentUpon>ShiftMakingForm.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Presentation\DepartmentManager.resx">
+      <DependentUpon>DepartmentManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation\CreateProduct.resx">
-      <DependentUpon>CreateProduct.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentation\EditProduct.resx">
-      <DependentUpon>EditProduct.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentation\StockManager.resx">
-      <DependentUpon>StockManager.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentation\ViewProduct.resx">
-      <DependentUpon>ViewProduct.cs</DependentUpon>
+    <EmbeddedResource Include="Presentation\EmployeeManagerPage.resx">
+      <DependentUpon>EmployeeManagerPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -167,9 +130,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ShiftMakingForm.resx">
-      <DependentUpon>ShiftMakingForm.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -184,8 +144,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Database\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

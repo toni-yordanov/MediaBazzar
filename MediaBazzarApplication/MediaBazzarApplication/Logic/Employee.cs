@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MediaBazzarApplication
 {
-    class Employee
+    public class Employee
     {
         //properties
         public int ID { get; set; }
@@ -26,6 +26,8 @@ namespace MediaBazzarApplication
         public string Country { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
+        public string Contracttype { get; set; }
+        public double Wage { get; set; }
 
 
         public string PreferedShift { get; set; }
@@ -68,28 +70,53 @@ namespace MediaBazzarApplication
         }
 
         //FOR LOGIN
-        public Employee(int ID, string Firstname, string Lastname, string DateOfBirth, string PhoneNumber, string Address,
-            string PostalCode, string Email, string BSN, string Password, string Position, string Username, string Gender,
-            string City, string Country, int DepartmentID, string DepartmentName, string Active)
+        public Employee(int ID, string Firstname, string Lastname, string DateOfBirth, string Gender, string BSN, string PhoneNumber, string Address,
+            string PostalCode, string Email,string City, string Country, string Username, string Password, string DepartmentName, string Position, string Contracttype, double Wage)
         {
             this.ID = ID;
             this.Firstname = Firstname;
             this.Lastname = Lastname;
             this.DateOfBirth = DateOfBirth;
+            this.Gender = Gender;
+            this.BSN = BSN;
             this.PhoneNumber = PhoneNumber;
             this.Address = Address;
             this.PostalCode = PostalCode;
             this.Email = Email;
-            this.BSN = BSN;
-            this.Password = Password;
-            this.Position = Position;
-            this.Username = Username;
-            this.Gender = Gender;
             this.City = City;
             this.Country = Country;
-            this.DepartmentID = DepartmentID;
+            this.Username = Username;
+            this.Password = Password;
             this.DepartmentName = DepartmentName;
-            this.Active = Active;
+            this.Position = Position;
+            this.DepartmentName = DepartmentName;
+            this.Wage = Wage;
+
+
+        }
+
+        public Employee(int ID, string Firstname, string Lastname, string DateOfBirth, string Gender, string BSN, string PhoneNumber, string Address,
+           string PostalCode, string Email, string City, string Country, string Username, string DepartmentName, string Position, string Contracttype, double Wage)
+        {
+            this.ID = ID;
+            this.Firstname = Firstname;
+            this.Lastname = Lastname;
+            this.DateOfBirth = DateOfBirth;
+            this.Gender = Gender;
+            this.BSN = BSN;
+            this.PhoneNumber = PhoneNumber;
+            this.Address = Address;
+            this.PostalCode = PostalCode;
+            this.Email = Email;
+            this.City = City;
+            this.Country = Country;
+            this.Username = Username;
+            this.DepartmentName = DepartmentName;
+            this.Position = Position;
+            this.DepartmentName = DepartmentName;
+            this.Wage = Wage;
+
+
         }
 
 
