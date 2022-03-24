@@ -1,0 +1,27 @@
+﻿@page
+@model LogInModel
+@{
+}
+
+
+
+        <form method="post" class="align-content-center">
+            <h1 class="h3 mb-3 fw-normal">Please Login</h1>
+            <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+
+
+
+                <label>Email address</label>
+                <input type="email" class="form-control-plaintext" asp-for="Email" placeholder="name@example.com">
+                <span class="text-danger" asp-validation-for="Email"></span>
+
+            
+            
+                <label>Password</label>
+                <input type="password" class="form-control-plaintext" asp-for="Password" placeholder="Password">
+                <span class="text-danger" asp-validation-for="Password"></span>
+                <br />
+                <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
+</form>
+
+    
