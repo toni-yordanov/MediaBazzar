@@ -1,0 +1,18 @@
+﻿@page
+@model ScheduleModel
+@{
+    ViewData["Title"] = "Schedule";
+}
+
+<form method="post" class="align-content-center">
+    <h1 class="h3 mb-3 fw-normal">Schedule</h1>
+    <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+
+
+    @foreach (var v in Model.Shifts)
+    {
+        <p width="33%">@Model.Keys[Convert.ToInt32(v)]</p>
+    }
+
+
+</form>

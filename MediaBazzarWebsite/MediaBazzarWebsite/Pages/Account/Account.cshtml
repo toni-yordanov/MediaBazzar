@@ -1,0 +1,63 @@
+﻿@page
+@model AccountModel
+@{
+    ViewData["Title"] = "Account";
+}
+@*@section Styles {
+    <link rel="stylesheet" href="~/css/Account.css" />
+}*@
+<div class="center">
+    <form method="post" class="align-content-center">
+        
+        <label>First Name</label>
+        <input type="text" class="form-control-sm" asp-for="FirstName" readonly>
+        <span class="text-danger" asp-validation-for="FirstName"></span>
+        <br />
+
+        <label>Last Name</label>
+        <input type="text" class="form-control-sm" asp-for="LastName" readonly>
+        <span class="text-danger" asp-validation-for="LastName"></span>
+        <br />
+
+        <label>Email</label>
+        <input type="email" class="form-control-sm" asp-for="Email">
+        <span class="text-danger" asp-validation-for="Email"></span>
+        <br />
+
+        <label>Username</label>
+        <input type="text" class="form-control-sm" asp-for="Username" readonly>
+        <span class="text-danger" asp-validation-for="Username"></span>
+        <br />
+
+        <label>Phone Number</label>
+        <input type="tel" class="form-control-sm" asp-for="Phone">
+        <span class="text-danger" asp-validation-for="Phone"></span>
+        <br />
+
+        <label>Address</label>
+        <input type="text" class="form-control-sm" asp-for="Address">
+        <span class="text-danger" asp-validation-for="Address"></span>
+        <br />
+
+        <label>Department</label>
+        <input type="text" class="form-control-sm" asp-for="Department" readonly>
+        <span class="text-danger" asp-validation-for="Department"></span>
+        <br />
+
+        <label>Password</label>
+        <input type="password" class="form-control-sm" asp-for="Password">
+        <span class="text-danger" asp-validation-for="Password"></span>
+        <br />
+
+        <label>Salary</label>
+        <input type="text" class="form-control-sm" asp-for="Salary" readonly>
+        <span class="text-danger" asp-validation-for="Salary"></span>
+        <br />
+
+        <br />
+        <button class="w-50 btn btn-sm btn-primary" type="submit">Update Information</button>
+        <br />
+        <br />
+        <p>@Model.message</p>
+    </form>
+</div>
