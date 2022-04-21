@@ -18,6 +18,9 @@ namespace MediaBazzarApplication.DAL
             conn = new DataAccess();
         }
 
+
+
+        #region Employees
         public void AddEmployee
             (string name, string lastname, DateTime birth, string username,
             string password, string gender, string bsn, string adress, string city, string country,
@@ -64,7 +67,7 @@ namespace MediaBazzarApplication.DAL
             }
             catch (Exception e)
             {
-                return; 
+                throw e;
 
             }
             finally
@@ -127,8 +130,7 @@ namespace MediaBazzarApplication.DAL
             }
             catch (Exception e)
             {
-                //MessageBox.Show(e.Message);
-                return null;
+                throw e;
             }
             finally
             {
@@ -192,8 +194,7 @@ namespace MediaBazzarApplication.DAL
             }
             catch (Exception e)
             {
-                //MessageBox.Show(e.Message);
-                return null;
+                throw e;
             }
             finally
             {
@@ -207,13 +208,15 @@ namespace MediaBazzarApplication.DAL
         public List<Employee> GetEmployeesbyID(int id)
         {
             MySqlConnection databaseConnection = new MySqlConnection(conn.Databaseconnection);
-            string GetEmployees = DBQueries.GetEmployees;
-            MySqlCommand commandDatabase = new MySqlCommand(GetEmployees, databaseConnection);
+            string GetEmployeesByid = DBQueries.GetEmployeesbyID;
+            MySqlCommand commandDatabase = new MySqlCommand(GetEmployeesByid, databaseConnection);
 
             List<Employee> employees = new List<Employee>();
             try
             {
                 databaseConnection.Open();
+
+                commandDatabase.Parameters.AddWithValue("@id", id);
 
                 MySqlDataReader reader = commandDatabase.ExecuteReader();
                 if (reader is null)
@@ -256,8 +259,7 @@ namespace MediaBazzarApplication.DAL
             }
             catch (Exception e)
             {
-                //MessageBox.Show(e.Message);
-                return null;
+                throw e;
             }
             finally
             {
@@ -269,13 +271,15 @@ namespace MediaBazzarApplication.DAL
         public List<Employee> GetEmployeesbyDepartment(string departmentname)
         {
             MySqlConnection databaseConnection = new MySqlConnection(conn.Databaseconnection);
-            string GetEmployees = DBQueries.GetEmployees;
+            string GetEmployees = DBQueries.GetEmployeesbyDepartment;
             MySqlCommand commandDatabase = new MySqlCommand(GetEmployees, databaseConnection);
 
             List<Employee> employees = new List<Employee>();
             try
             {
                 databaseConnection.Open();
+
+                commandDatabase.Parameters.AddWithValue("@name", departmentname);
 
                 MySqlDataReader reader = commandDatabase.ExecuteReader();
                 if (reader is null)
@@ -318,8 +322,157 @@ namespace MediaBazzarApplication.DAL
             }
             catch (Exception e)
             {
-                //MessageBox.Show(e.Message);
-                return null;
+                throw e;
+            }
+            finally
+            {
+                databaseConnection.Close();
+            }
+        }
+        #endregion
+
+        #region Contracts 
+        public void AddContract(Contract c)
+        {
+
+            MySqlConnection databaseConnection = new MySqlConnection(conn.Databaseconnection);
+            string addcontractquery = DBQueries.AddContract;
+            MySqlCommand commandDatabase = new MySqlCommand(addcontractquery, databaseConnection);
+            try
+            {
+                commandDatabase.Parameters.AddWithValue("@id", c.EmployeeID);
+                commandDatabase.Parameters.AddWithValue("@start", c.StartDate);
+                commandDatabase.Parameters.AddWithValue("@end", c.EndDate);
+                commandDatabase.Parameters.AddWithValue("@depname", c.DepartmentName);
+                commandDatabase.Parameters.AddWithValue("@position", c.Position);
+                commandDatabase.Parameters.AddWithValue("@type", c.ContractType);
+                commandDatabase.Parameters.AddWithValue("@wage", c.Wage);
+                commandDatabase.Parameters.AddWithValue("@active", c.Active);
+
+
+
+                databaseConnection.Open();
+                MySqlDataReader reader = commandDatabase.ExecuteReader();
+
+
+                if (reader is null)
+                {
+                    return;
+                }
+
+
+            }
+            catch (Exception e)
+            {
+
+                throw e; 
+
+            }
+            finally
+            {
+                databaseConnection.Close();
+            }
+
+
+        }
+
+        public List<Contract> GetContracts()
+        {
+            MySqlConnection databaseConnection = new MySqlConnection(conn.Databaseconnection);
+            string GetContracts = DBQueries.GetContracts;
+            MySqlCommand commandDatabase = new MySqlCommand(GetContracts, databaseConnection);
+
+            List<Contract> contracts = new List<Contract>();
+            try
+            {
+                databaseConnection.Open();
+
+                MySqlDataReader reader = commandDatabase.ExecuteReader();
+                if (reader is null)
+                {
+                    return null;
+                }
+
+                while (reader.Read())
+                {
+                    if (reader.RecordsAffected > 0)
+                    {
+                        //MessageBox.Show("Successfull");
+                    }
+
+                    Contract c = new Contract()
+                    {
+                        ContractID = Convert.ToInt32(reader["ContractID"]),
+                        EmployeeID = Convert.ToInt32(reader["EmployeeID"]),
+                        StartDate = Convert.ToDateTime(reader["StartDate"]),
+                        EndDate = Convert.ToDateTime(reader["EndDate"]),
+                        DepartmentName = reader["DepartmentName"].ToString(),
+                        Position = reader["Position"].ToString(),
+                        ContractType = reader["ContractType"].ToString(),
+                        Wage = Convert.ToDouble(reader["Wage"]),
+                        Active = Convert.ToBoolean(reader["Active"])
+                    };
+                    contracts.Add(c);
+                }
+
+                return contracts;
+            }
+            catch (Exception e)
+            {
+                throw e; 
+            }
+            finally
+            {
+                databaseConnection.Close();
+            }
+        }
+
+        public List<Contract> GetContractswithId(int id)
+        {
+            MySqlConnection databaseConnection = new MySqlConnection(conn.Databaseconnection);
+            string GetContractsByid = DBQueries.GetContractswithId;
+            MySqlCommand commandDatabase = new MySqlCommand(GetContractsByid, databaseConnection);
+
+            List<Contract> contracts = new List<Contract>();
+            try
+            {
+                databaseConnection.Open();
+
+                commandDatabase.Parameters.AddWithValue("@id", id);
+
+                MySqlDataReader reader = commandDatabase.ExecuteReader();
+                if (reader is null)
+                {
+                    return null;
+                }
+
+                while (reader.Read())
+                {
+                    if (reader.RecordsAffected > 0)
+                    {
+                        //MessageBox.Show("Successfull");
+                    }
+
+                    Contract c = new Contract()
+                    {
+                        ContractID = Convert.ToInt32(reader["ContractID"]),
+                        EmployeeID = Convert.ToInt32(reader["EmployeeID"]),
+                        StartDate = Convert.ToDateTime(reader["StartDate"]),
+                        EndDate = Convert.ToDateTime(reader["EndDate"]),
+                        DepartmentName = reader["DepartmentName"].ToString(),
+                        Position = reader["Position"].ToString(),
+                        ContractType = reader["ContractType"].ToString(),
+                        Wage = Convert.ToDouble(reader["Wage"]),
+                        Active = Convert.ToBoolean(reader["Active"])
+                    };
+                    contracts.Add(c);
+                }
+
+                return contracts;
+            }
+            catch (Exception e)
+            {
+                throw e; 
             }
             finally
             {
@@ -329,6 +482,10 @@ namespace MediaBazzarApplication.DAL
 
 
 
+
+
+
+        #endregion
 
     }
 }

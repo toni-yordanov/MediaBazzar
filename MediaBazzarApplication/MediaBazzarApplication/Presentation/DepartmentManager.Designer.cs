@@ -44,7 +44,7 @@ namespace MediaBazzarApplication.Presentation
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(124, 21);
+            this.label1.Location = new System.Drawing.Point(49, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(147, 18);
             this.label1.TabIndex = 0;
@@ -52,14 +52,14 @@ namespace MediaBazzarApplication.Presentation
             // 
             // tbName
             // 
-            this.tbName.Location = new System.Drawing.Point(108, 40);
+            this.tbName.Location = new System.Drawing.Point(109, 44);
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(100, 20);
             this.tbName.TabIndex = 2;
             // 
             // btnAddDepartment
             // 
-            this.btnAddDepartment.Location = new System.Drawing.Point(76, 76);
+            this.btnAddDepartment.Location = new System.Drawing.Point(55, 70);
             this.btnAddDepartment.Name = "btnAddDepartment";
             this.btnAddDepartment.Size = new System.Drawing.Size(75, 23);
             this.btnAddDepartment.TabIndex = 3;
@@ -69,7 +69,7 @@ namespace MediaBazzarApplication.Presentation
             // 
             // btnRemove
             // 
-            this.btnRemove.Location = new System.Drawing.Point(44, 347);
+            this.btnRemove.Location = new System.Drawing.Point(146, 299);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(75, 23);
             this.btnRemove.TabIndex = 3;
@@ -81,9 +81,9 @@ namespace MediaBazzarApplication.Presentation
             this.groupBox1.Controls.Add(this.tbName);
             this.groupBox1.Controls.Add(this.btnAddDepartment);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(169, 306);
+            this.groupBox1.Location = new System.Drawing.Point(12, 328);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(227, 132);
+            this.groupBox1.Size = new System.Drawing.Size(228, 110);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add Department";
@@ -102,7 +102,7 @@ namespace MediaBazzarApplication.Presentation
             this.lbDepartments.FormattingEnabled = true;
             this.lbDepartments.Location = new System.Drawing.Point(12, 42);
             this.lbDepartments.Name = "lbDepartments";
-            this.lbDepartments.Size = new System.Drawing.Size(384, 251);
+            this.lbDepartments.Size = new System.Drawing.Size(228, 251);
             this.lbDepartments.TabIndex = 5;
             // 
             // DepartmentManager
@@ -110,7 +110,7 @@ namespace MediaBazzarApplication.Presentation
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(408, 450);
+            this.ClientSize = new System.Drawing.Size(254, 450);
             this.Controls.Add(this.lbDepartments);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnRemove);

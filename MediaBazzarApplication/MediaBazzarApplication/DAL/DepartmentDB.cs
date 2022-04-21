@@ -43,7 +43,7 @@ namespace MediaBazzarApplication.DAL
             }
             catch (Exception e)
             {
-                return;
+                throw e;
 
             }
             finally
@@ -95,8 +95,7 @@ namespace MediaBazzarApplication.DAL
             }
             catch (Exception e)
             {
-                //MessageBox.Show(e.Message);
-                return null;
+                throw e;
             }
             finally
             {

@@ -25,8 +25,8 @@ namespace MediaBazzarApplication.Presentation
             e = new Employee();
             ddb = new DepartmentDB();
 
-            UpdateEmployeeTable();
-
+            UpdateTables();
+            PopulateDepartments();
 
         }
 
@@ -42,16 +42,16 @@ namespace MediaBazzarApplication.Presentation
             }
         }
 
-        public void UpdateEmployeeTable()
+        public void UpdateTables()
         {
             dgvEmployees.DataSource = edb.GetEmployees();
 
+            dgvContracts.DataSource = edb.GetContracts();
+            ColorGradeContracts();
+
         }
 
-        public void GenerateEmployees()
-        {
-            dgvEmployees.DataSource = "";
-        }
+        
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
@@ -87,7 +87,7 @@ namespace MediaBazzarApplication.Presentation
                     gender, bsn, adress, city, country, postalcode, email, phonenum,
                     departmentname, position, contracttype , wage);
 
-                UpdateEmployeeTable();
+                UpdateTables();
                 tabPage1.Show(); 
 
             }
@@ -171,6 +171,7 @@ namespace MediaBazzarApplication.Presentation
             }
             else
             {
+                btnReset.Visible = true; 
                 if (rbName.Checked)
                 {
                     List <Employee> employees = edb.GetEmployeesbyName(tbName.Text);
@@ -190,13 +191,21 @@ namespace MediaBazzarApplication.Presentation
                     {
                         MessageBox.Show("We couldn't find anyone with this ID.");
                     }
+                    else
+                    {
+                        dgvEmployees.DataSource = employees;
+                    }
                 }
                 else
                 {
                     List<Employee> employees = edb.GetEmployeesbyDepartment(cbxDepartment.SelectedItem.ToString());
-                    if (employees.Count == 0)
+                    if (employees is null || employees.Count == 0)
                     {
-                        MessageBox.Show("We couldn't find anyone with this ID.");
+                        MessageBox.Show("We couldn't find anyone with this Departmentname.");
+                    }
+                    else
+                    {
+                        dgvEmployees.DataSource = employees;
                     }
                 }
 
@@ -207,5 +216,52 @@ namespace MediaBazzarApplication.Presentation
         {
             label19.Visible = true; 
         }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            tbName.Text = "";
+            tbID.Text = "";
+            cbxDepartment.Text = "";
+            UpdateTables();
+            btnReset.Visible = false; 
+        }
+
+
+        #region Contracts 
+
+        private void btnTerminateContract_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to terminate this contract? ", "Terminate Contract", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                //terminating the contract
+                return;  
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //returning to the page
+                return;
+            }
+        }
+
+        private void btnAddContract_Click(object sender, EventArgs e)
+        {
+            AddContract ac = new AddContract();
+            ac.Show();
+            this.Hide();
+        }
+
+        public void ColorGradeContracts()
+        {
+            foreach (DataGridViewRow row in dgvContracts.Rows)
+            {
+                if (Convert.ToDateTime(row.Cells[2].Value) < DateTime.Today)
+                {
+                    row.DefaultCellStyle.BackColor = Color.Orange;
+                }
+            }
+        }
+
+        #endregion
     }
 }

@@ -12,7 +12,7 @@ namespace MediaBazzarApplication.DAL
     {
 
         //employees
-        #region
+        #region Employees
         public static readonly string AddEmployee = "INSERT INTO `employees_prj`(`Firstname`, `Lastname`, `Dateofbirth`, `Gender`, `BSN`, `Phonenumber`, `Adress`, `Postalcode`, `Email`, `City`, `Country`, `Username`, `Password`, `Departmentname`, `Position`,`Contracttype`, `Wage`) VALUES (@name, @lastname, @dateofbirth, @gender, @bsn, @phone, @adress, @postalcode, @email, @city, @country, @username, @password, @depname, @position, @contracttype, @wage)";
         public static readonly string GetEmployees = "SELECT `ID`, `Firstname`, `Lastname`, `Dateofbirth`, `Gender`, `BSN`, `Phonenumber`, `Adress`, `Postalcode`, `Email`, `City`, `Country`, `Username`, `Departmentname`, `Position`, `Contracttype`, `Wage` FROM `employees_prj`";
         public static readonly string GetEmployeeswithpassword = "SELECT `ID`, `Firstname`, `Lastname`, `Dateofbirth`, `Gender`, `BSN`, `Phonenumber`, `Adress`, `Postalcode`, `Email`, `City`, `Country`, `Username`, `Departmentname`, `Position`, `Contracttype`, `Wage` FROM `employees_prj`";
@@ -29,9 +29,22 @@ namespace MediaBazzarApplication.DAL
 
         #endregion
 
+
+        //Contracts
+        #region Contracts
+
+        public static readonly string AddContract = "INSERT INTO `contracts_prj`(`EmployeeID`, `StartDate`, `EndDate`, `DepartmentName`, `Position`, `ContractType`, `Wage`, `Active`) VALUES " +
+            "                                                                   (@id , @start , @end , @depname , @position , @type , @wage , @active)"; 
+        public static readonly string GetContracts = "SELECT `ContractID`, `EmployeeID`, `StartDate`, `EndDate`, `DepartmentName`, `Position`, `ContractType`, `Wage`, `Active` FROM `contracts_prj`";
+        public static readonly string GetContractswithId = "SELECT `ContractID`, `EmployeeID`, `StartDate`, `EndDate`, `DepartmentName`, `Position`, `ContractType`, `Wage`, `Active` FROM `contracts_prj` WHERE EmployeeID =  @id";
+        public static readonly string GetSpesificContract = "SELECT `ContractID`, `EmployeeID`, `StartDate`, `EndDate`, `DepartmentName`, `Position`, `ContractType`, `Wage`, `Active` FROM `contracts_prj` WHERE ContractID = @id";
+
+
+
+        #endregion
         //Departments
 
-        #region
+        #region Departments
 
 
         public static readonly string AddDepartment = "INSERT INTO `departments_prj`(`Departmentname`) VALUES (@name)"; 

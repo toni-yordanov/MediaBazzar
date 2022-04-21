@@ -32,3 +32,4 @@ C:\Users\kaan0\mediabazzar-project-group4\MediaBazzarApplication\MediaBazzarAppl
 C:\Users\kaan0\mediabazzar-project-group4\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.pdb
 C:\Users\kaan0\mediabazzar-project-group4\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Presentation.DepartmentManager.resources
 C:\Users\kaan0\mediabazzar-project-group4\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Presentation.EmployeeManagerPage.resources
+C:\Users\kaan0\mediabazzar-project-group4\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Presentation.AddContract.resources

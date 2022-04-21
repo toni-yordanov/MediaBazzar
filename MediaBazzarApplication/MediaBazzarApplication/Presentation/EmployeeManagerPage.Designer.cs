@@ -32,6 +32,7 @@ namespace MediaBazzarApplication.Presentation
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnReset = new System.Windows.Forms.Button();
             this.cbxDepartment = new System.Windows.Forms.ComboBox();
             this.tbID = new System.Windows.Forms.TextBox();
             this.tbName = new System.Windows.Forms.TextBox();
@@ -42,6 +43,7 @@ namespace MediaBazzarApplication.Presentation
             this.dgvEmployees = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.nudWage = new System.Windows.Forms.NumericUpDown();
             this.label17 = new System.Windows.Forms.Label();
             this.cbxContype = new System.Windows.Forms.ComboBox();
@@ -78,13 +80,18 @@ namespace MediaBazzarApplication.Presentation
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.label19 = new System.Windows.Forms.Label();
+            this.btnContractDetails = new System.Windows.Forms.Button();
+            this.btnTerminateContract = new System.Windows.Forms.Button();
+            this.btnAddContract = new System.Windows.Forms.Button();
+            this.dgvContracts = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudWage)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContracts)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -111,6 +118,7 @@ namespace MediaBazzarApplication.Presentation
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnReset);
             this.tabPage1.Controls.Add(this.cbxDepartment);
             this.tabPage1.Controls.Add(this.tbID);
             this.tabPage1.Controls.Add(this.tbName);
@@ -127,10 +135,25 @@ namespace MediaBazzarApplication.Presentation
             this.tabPage1.Text = "Management";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // btnReset
+            // 
+            this.btnReset.Location = new System.Drawing.Point(48, 54);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(75, 23);
+            this.btnReset.TabIndex = 5;
+            this.btnReset.Text = "Reset table";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Visible = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // cbxDepartment
             // 
             this.cbxDepartment.Enabled = false;
             this.cbxDepartment.FormattingEnabled = true;
+            this.cbxDepartment.Items.AddRange(new object[] {
+            "HR",
+            "Sales",
+            "Depot"});
             this.cbxDepartment.Location = new System.Drawing.Point(661, 21);
             this.cbxDepartment.Name = "cbxDepartment";
             this.cbxDepartment.Size = new System.Drawing.Size(121, 21);
@@ -262,6 +285,17 @@ namespace MediaBazzarApplication.Presentation
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Contract Details";
             this.groupBox1.MouseHover += new System.EventHandler(this.groupBox1_MouseHover);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(243, 139);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(346, 16);
+            this.label19.TabIndex = 18;
+            this.label19.Text = "This is the first contract of the employee (Starting contract)";
+            this.label19.Visible = false;
             // 
             // nudWage
             // 
@@ -584,6 +618,10 @@ namespace MediaBazzarApplication.Presentation
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.btnContractDetails);
+            this.tabPage3.Controls.Add(this.btnTerminateContract);
+            this.tabPage3.Controls.Add(this.btnAddContract);
+            this.tabPage3.Controls.Add(this.dgvContracts);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(859, 449);
@@ -591,16 +629,44 @@ namespace MediaBazzarApplication.Presentation
             this.tabPage3.Text = "Contracts";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // label19
+            // btnContractDetails
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(243, 139);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(346, 16);
-            this.label19.TabIndex = 18;
-            this.label19.Text = "This is the first contract of the employee (Starting contract)";
-            this.label19.Visible = false;
+            this.btnContractDetails.Location = new System.Drawing.Point(332, 346);
+            this.btnContractDetails.Name = "btnContractDetails";
+            this.btnContractDetails.Size = new System.Drawing.Size(173, 68);
+            this.btnContractDetails.TabIndex = 3;
+            this.btnContractDetails.Text = "Contract Details";
+            this.btnContractDetails.UseVisualStyleBackColor = true;
+            // 
+            // btnTerminateContract
+            // 
+            this.btnTerminateContract.BackColor = System.Drawing.Color.Red;
+            this.btnTerminateContract.Location = new System.Drawing.Point(19, 342);
+            this.btnTerminateContract.Name = "btnTerminateContract";
+            this.btnTerminateContract.Size = new System.Drawing.Size(146, 76);
+            this.btnTerminateContract.TabIndex = 2;
+            this.btnTerminateContract.Text = "Terminate Contract";
+            this.btnTerminateContract.UseVisualStyleBackColor = false;
+            this.btnTerminateContract.Click += new System.EventHandler(this.btnTerminateContract_Click);
+            // 
+            // btnAddContract
+            // 
+            this.btnAddContract.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnAddContract.Location = new System.Drawing.Point(636, 346);
+            this.btnAddContract.Name = "btnAddContract";
+            this.btnAddContract.Size = new System.Drawing.Size(201, 68);
+            this.btnAddContract.TabIndex = 1;
+            this.btnAddContract.Text = "New Contract";
+            this.btnAddContract.UseVisualStyleBackColor = false;
+            this.btnAddContract.Click += new System.EventHandler(this.btnAddContract_Click);
+            // 
+            // dgvContracts
+            // 
+            this.dgvContracts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvContracts.Location = new System.Drawing.Point(19, 18);
+            this.dgvContracts.Name = "dgvContracts";
+            this.dgvContracts.Size = new System.Drawing.Size(818, 308);
+            this.dgvContracts.TabIndex = 0;
             // 
             // EmployeeManagerPage
             // 
@@ -611,7 +677,7 @@ namespace MediaBazzarApplication.Presentation
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
             this.Name = "EmployeeManagerPage";
-            this.Text = "EmployeeManagerPage";
+            this.Text = "1 ";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -621,6 +687,8 @@ namespace MediaBazzarApplication.Presentation
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudWage)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContracts)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -676,7 +744,12 @@ namespace MediaBazzarApplication.Presentation
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ComboBox cbxContype;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Button btnContractDetails;
+        private System.Windows.Forms.Button btnTerminateContract;
+        private System.Windows.Forms.Button btnAddContract;
+        private System.Windows.Forms.DataGridView dgvContracts;
     }
 }

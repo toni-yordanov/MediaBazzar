@@ -18,22 +18,22 @@ namespace MediaBazzarApplication
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            StockManager sk = new StockManager();
-            sk.ShowDialog();
-        }
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    StockManager sk = new StockManager();
+        //    sk.ShowDialog();
+        //}
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            EmployeeManager em = new EmployeeManager();
-            em.ShowDialog();
-        }
+        //private void button2_Click(object sender, EventArgs e)
+        //{
+        //    EmployeeManager em = new EmployeeManager();
+        //    em.ShowDialog();
+        //}
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            ShiftMakingForm smf = new ShiftMakingForm();
-            smf.ShowDialog();
-        }
+        //private void button3_Click(object sender, EventArgs e)
+        //{
+        //    ShiftMakingForm smf = new ShiftMakingForm();
+        //    smf.ShowDialog();
+        //}
     }
 }

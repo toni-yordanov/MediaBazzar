@@ -91,7 +91,11 @@ namespace MediaBazzarApplication
             this.Position = Position;
             this.DepartmentName = DepartmentName;
             this.Wage = Wage;
+        }
 
+        public Employee(int id, string firstname, string lastname, string Dateofbirth, string gender, string bsn, string phonenum, string address, string postalcode, string email, 
+            string city, string country, string username)
+        {
 
         }
 
