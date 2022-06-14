@@ -5,6 +5,7 @@ using System.Text;
 using MySql.Data.MySqlClient;
 using System.Data;
 using MediaBazzarApplication.Logic;
+using System.Windows.Forms;
 
 namespace MediaBazzarApplication.DAL
 {
@@ -13,19 +14,22 @@ namespace MediaBazzarApplication.DAL
         public DataAccess conn;
         public Employee e;
 
+        public List<Contract> contracts; 
         public EmployeeDB()
         {
             conn = new DataAccess();
+
+            contracts = new List<Contract>();
         }
 
 
 
         #region Employees
-        public void AddEmployee
+        public void AddEmployeeWithoutContract
             (string name, string lastname, DateTime birth, string username,
-            string password, string gender, string bsn, string adress, string city, string country,
-            string postal, string email, string phone, string departmentname, string position,
-            string contracttype, double wage)
+            string password, string gender, string bsn, string adress,
+            string city, string country, string postal, string email, 
+            string phone, string departmentname)
         {
             
             MySqlConnection databaseConnection = new MySqlConnection(conn.Databaseconnection);
@@ -47,9 +51,6 @@ namespace MediaBazzarApplication.DAL
                 commandDatabase.Parameters.AddWithValue("@username", username);
                 commandDatabase.Parameters.AddWithValue("@password", password);
                 commandDatabase.Parameters.AddWithValue("@depname", departmentname);
-                commandDatabase.Parameters.AddWithValue("@position", position);
-                commandDatabase.Parameters.AddWithValue("@contracttype", contracttype);
-                commandDatabase.Parameters.AddWithValue("@wage", wage);
 
 
 
@@ -61,6 +62,59 @@ namespace MediaBazzarApplication.DAL
                 if (reader is null)
                 {
                     return; 
+                }
+
+
+            }
+            catch (Exception e)
+            {
+                throw e;
+
+            }
+            finally
+            {
+                databaseConnection.Close();
+            }
+
+        }
+
+        //adding employee with contract
+        public void AddEmployeeWithContract
+            (string name, string lastname, DateTime birth, string username,
+            string password, string gender, string bsn, string adress, string city, string country,
+            string postal, string email, string phone, string departmentname)
+        {
+
+            MySqlConnection databaseConnection = new MySqlConnection(conn.Databaseconnection);
+            string addemployeequery = DBQueries.AddEmployee;
+            MySqlCommand commandDatabase = new MySqlCommand(addemployeequery, databaseConnection);
+            try
+            {
+                commandDatabase.Parameters.AddWithValue("@name", name);
+                commandDatabase.Parameters.AddWithValue("@lastname", lastname);
+                commandDatabase.Parameters.AddWithValue("@dateofbirth", birth);
+                commandDatabase.Parameters.AddWithValue("@gender", gender);
+                commandDatabase.Parameters.AddWithValue("@bsn", bsn);
+                commandDatabase.Parameters.AddWithValue("@phone", phone);
+                commandDatabase.Parameters.AddWithValue("@adress", adress);
+                commandDatabase.Parameters.AddWithValue("@postalcode", postal);
+                commandDatabase.Parameters.AddWithValue("@email", email);
+                commandDatabase.Parameters.AddWithValue("@city", city);
+                commandDatabase.Parameters.AddWithValue("@country", country);
+                commandDatabase.Parameters.AddWithValue("@username", username);
+                commandDatabase.Parameters.AddWithValue("@password", password);
+                commandDatabase.Parameters.AddWithValue("@depname", departmentname);
+
+
+
+
+                databaseConnection.Open();
+                MySqlDataReader reader = commandDatabase.ExecuteReader();
+
+
+                if (reader is null)
+                {
+                    return;
                 }
 
 
@@ -118,9 +172,6 @@ namespace MediaBazzarApplication.DAL
                         Country = (reader["Country"]).ToString(),
                         Username = (reader["Username"]).ToString(),
                         DepartmentName = (reader["Departmentname"]).ToString(),
-                        Position = (reader["Position"]).ToString(),
-                        Contracttype = (reader["Contracttype"]).ToString(),
-                        Wage = Convert.ToDouble(reader["Wage"]),
                        
                     };
                     employees.Add(emp);
@@ -322,7 +373,8 @@ namespace MediaBazzarApplication.DAL
             }
             catch (Exception e)
             {
-                throw e;
+                MessageBox.Show("There was a problem");
+                return null; 
             }
             finally
             {
@@ -410,11 +462,12 @@ namespace MediaBazzarApplication.DAL
                         Position = reader["Position"].ToString(),
                         ContractType = reader["ContractType"].ToString(),
                         Wage = Convert.ToDouble(reader["Wage"]),
-                        Active = Convert.ToBoolean(reader["Active"])
+                        Active = Convert.ToBoolean(reader["Active"]),
+                        Terminated = Convert.ToBoolean(reader["Terminated"]),
                     };
                     contracts.Add(c);
                 }
-
+                this.contracts = contracts;
                 return contracts;
             }
             catch (Exception e)
@@ -426,7 +479,61 @@ namespace MediaBazzarApplication.DAL
                 databaseConnection.Close();
             }
         }
+        public Contract GetContract(int id)
+        {
+            List<Contract> contracts = GetContracts();
+            foreach (Contract contract in contracts)
+            {
+                if (contract.ContractID == id)
+                {
+                    return contract;
+                }
+            }
 
+            return null; 
+        }
+
+        public List<Contract> GetActiveContracts()
+        {
+            List<Contract> activecontracts = new List<Contract>();
+            foreach (Contract contract in contracts)
+            {
+                if (contract.Active is true)
+                {
+                    activecontracts.Add(contract);
+                }
+
+            }
+            if (activecontracts.Count != 0)
+            {
+                return activecontracts;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public List<Contract> GetTerminatedContracts()
+        {
+            List<Contract> activecontracts = new List<Contract>();
+            foreach (Contract contract in contracts)
+            {
+                if (contract.Terminated is true)
+                {
+                    activecontracts.Add(contract);
+                }
+
+            }
+            if (activecontracts.Count != 0)
+            {
+                return activecontracts;
+            }
+            else
+            {
+                return null;
+            }
+        }
         public List<Contract> GetContractswithId(int id)
         {
             MySqlConnection databaseConnection = new MySqlConnection(conn.Databaseconnection);
@@ -480,6 +587,38 @@ namespace MediaBazzarApplication.DAL
             }
         }
 
+        public void TermintateContract(int id)
+        {
+            MySqlConnection databaseConnection = new MySqlConnection(conn.Databaseconnection);
+            string TerminateContractByid = DBQueries.TerminateContractWithId;
+            MySqlCommand commandDatabase = new MySqlCommand(TerminateContractByid, databaseConnection);
+
+            List<Contract> contracts = new List<Contract>();
+            try
+            {
+                databaseConnection.Open();
+
+                commandDatabase.Parameters.AddWithValue("@id", id);
+
+                MySqlDataReader reader = commandDatabase.ExecuteReader();
+                if (reader is null)
+                {
+                    return ;
+                }
+
+
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                databaseConnection.Close();
+            }
+        }
+
+        
 
 
 

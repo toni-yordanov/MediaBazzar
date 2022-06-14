@@ -44,8 +44,6 @@ namespace MediaBazzarApplication
         public string Zipcode { get; set; }
         public string Houly_Wage { get; set; }
 
-        //public Contract myContract { get; set; }
-        //public Availability myAvailability { get; set; }
 
         public int ContractID { get; set; }
         public int AvailabilityID { get; set; }
@@ -70,8 +68,10 @@ namespace MediaBazzarApplication
         }
 
         //FOR LOGIN
-        public Employee(int ID, string Firstname, string Lastname, string DateOfBirth, string Gender, string BSN, string PhoneNumber, string Address,
-            string PostalCode, string Email,string City, string Country, string Username, string Password, string DepartmentName, string Position, string Contracttype, double Wage)
+        public Employee(int ID, string Firstname, string Lastname, string DateOfBirth,
+            string Gender, string BSN, string PhoneNumber, string Address,
+            string PostalCode, string Email,string City, string Country, 
+            string Username, string Password, string DepartmentName)
         {
             this.ID = ID;
             this.Firstname = Firstname;
@@ -88,10 +88,9 @@ namespace MediaBazzarApplication
             this.Username = Username;
             this.Password = Password;
             this.DepartmentName = DepartmentName;
-            this.Position = Position;
-            this.DepartmentName = DepartmentName;
-            this.Wage = Wage;
         }
+
+        
 
         public Employee(int id, string firstname, string lastname, string Dateofbirth, string gender, string bsn, string phonenum, string address, string postalcode, string email, 
             string city, string country, string username)
@@ -100,7 +99,7 @@ namespace MediaBazzarApplication
         }
 
         public Employee(int ID, string Firstname, string Lastname, string DateOfBirth, string Gender, string BSN, string PhoneNumber, string Address,
-           string PostalCode, string Email, string City, string Country, string Username, string DepartmentName, string Position, string Contracttype, double Wage)
+           string PostalCode, string Email, string City, string Country, string Username, string DepartmentName)
         {
             this.ID = ID;
             this.Firstname = Firstname;
@@ -116,9 +115,6 @@ namespace MediaBazzarApplication
             this.Country = Country;
             this.Username = Username;
             this.DepartmentName = DepartmentName;
-            this.Position = Position;
-            this.DepartmentName = DepartmentName;
-            this.Wage = Wage;
 
 
         }

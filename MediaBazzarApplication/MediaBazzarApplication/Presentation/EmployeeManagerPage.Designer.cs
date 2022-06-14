@@ -42,7 +42,15 @@ namespace MediaBazzarApplication.Presentation
             this.rbName = new System.Windows.Forms.RadioButton();
             this.dgvEmployees = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.chkContr = new System.Windows.Forms.CheckBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.cbxDep2 = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtpEnd = new System.Windows.Forms.DateTimePicker();
+            this.label22 = new System.Windows.Forms.Label();
+            this.dtpStart = new System.Windows.Forms.DateTimePicker();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.nudWage = new System.Windows.Forms.NumericUpDown();
             this.label17 = new System.Windows.Forms.Label();
@@ -80,6 +88,9 @@ namespace MediaBazzarApplication.Presentation
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.rbnAllContracts = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.btnContractDetails = new System.Windows.Forms.Button();
             this.btnTerminateContract = new System.Windows.Forms.Button();
             this.btnAddContract = new System.Windows.Forms.Button();
@@ -231,6 +242,9 @@ namespace MediaBazzarApplication.Presentation
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.chkContr);
+            this.tabPage2.Controls.Add(this.label20);
+            this.tabPage2.Controls.Add(this.cbxDep2);
             this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.Controls.Add(this.btnRegister);
             this.tabPage2.Controls.Add(this.cbxGender);
@@ -267,8 +281,45 @@ namespace MediaBazzarApplication.Presentation
             this.tabPage2.Text = "Register";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // chkContr
+            // 
+            this.chkContr.AutoSize = true;
+            this.chkContr.Location = new System.Drawing.Point(369, 219);
+            this.chkContr.Name = "chkContr";
+            this.chkContr.Size = new System.Drawing.Size(127, 17);
+            this.chkContr.TabIndex = 22;
+            this.chkContr.Text = "Add Starting Contract";
+            this.chkContr.UseVisualStyleBackColor = true;
+            this.chkContr.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(573, 167);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(97, 13);
+            this.label20.TabIndex = 19;
+            this.label20.Text = "Department name :";
+            // 
+            // cbxDep2
+            // 
+            this.cbxDep2.FormattingEnabled = true;
+            this.cbxDep2.Items.AddRange(new object[] {
+            "HR",
+            "Sales",
+            "Depot"});
+            this.cbxDep2.Location = new System.Drawing.Point(700, 163);
+            this.cbxDep2.Name = "cbxDep2";
+            this.cbxDep2.Size = new System.Drawing.Size(107, 21);
+            this.cbxDep2.TabIndex = 20;
+            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dtpEnd);
+            this.groupBox1.Controls.Add(this.label22);
+            this.groupBox1.Controls.Add(this.dtpStart);
+            this.groupBox1.Controls.Add(this.label21);
+            this.groupBox1.Controls.Add(this.label23);
             this.groupBox1.Controls.Add(this.label19);
             this.groupBox1.Controls.Add(this.nudWage);
             this.groupBox1.Controls.Add(this.label17);
@@ -278,7 +329,8 @@ namespace MediaBazzarApplication.Presentation
             this.groupBox1.Controls.Add(this.cbxPosition);
             this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Location = new System.Drawing.Point(16, 203);
+            this.groupBox1.Enabled = false;
+            this.groupBox1.Location = new System.Drawing.Point(26, 233);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(812, 168);
             this.groupBox1.TabIndex = 8;
@@ -286,11 +338,58 @@ namespace MediaBazzarApplication.Presentation
             this.groupBox1.Text = "Contract Details";
             this.groupBox1.MouseHover += new System.EventHandler(this.groupBox1_MouseHover);
             // 
+            // dtpEnd
+            // 
+            this.dtpEnd.Location = new System.Drawing.Point(602, 81);
+            this.dtpEnd.MinDate = new System.DateTime(2022, 5, 19, 0, 0, 0, 0);
+            this.dtpEnd.Name = "dtpEnd";
+            this.dtpEnd.Size = new System.Drawing.Size(107, 20);
+            this.dtpEnd.TabIndex = 20;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(514, 85);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(55, 13);
+            this.label22.TabIndex = 19;
+            this.label22.Text = "End Date:";
+            // 
+            // dtpStart
+            // 
+            this.dtpStart.Enabled = false;
+            this.dtpStart.Location = new System.Drawing.Point(211, 81);
+            this.dtpStart.MinDate = new System.DateTime(2022, 5, 19, 0, 0, 0, 0);
+            this.dtpStart.Name = "dtpStart";
+            this.dtpStart.Size = new System.Drawing.Size(107, 20);
+            this.dtpStart.TabIndex = 20;
+            this.dtpStart.Value = new System.DateTime(2022, 5, 19, 17, 56, 27, 0);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(84, 85);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(58, 13);
+            this.label21.TabIndex = 19;
+            this.label21.Text = "Start Date:";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(112, 65);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(157, 13);
+            this.label23.TabIndex = 18;
+            this.label23.Text = "Starting date will be todays date";
+            this.label23.Visible = false;
+            // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(243, 139);
+            this.label19.Location = new System.Drawing.Point(236, 12);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(346, 16);
             this.label19.TabIndex = 18;
@@ -304,7 +403,7 @@ namespace MediaBazzarApplication.Presentation
             0,
             0,
             65536});
-            this.nudWage.Location = new System.Drawing.Point(602, 90);
+            this.nudWage.Location = new System.Drawing.Point(602, 122);
             this.nudWage.Minimum = new decimal(new int[] {
             11,
             0,
@@ -322,7 +421,7 @@ namespace MediaBazzarApplication.Presentation
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(84, 94);
+            this.label17.Location = new System.Drawing.Point(84, 126);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(73, 13);
             this.label17.TabIndex = 0;
@@ -335,7 +434,7 @@ namespace MediaBazzarApplication.Presentation
             "full-time",
             "part-time",
             "student"});
-            this.cbxContype.Location = new System.Drawing.Point(211, 90);
+            this.cbxContype.Location = new System.Drawing.Point(211, 122);
             this.cbxContype.Name = "cbxContype";
             this.cbxContype.Size = new System.Drawing.Size(107, 21);
             this.cbxContype.TabIndex = 16;
@@ -343,6 +442,7 @@ namespace MediaBazzarApplication.Presentation
             // label14
             // 
             this.label14.AutoSize = true;
+            this.label14.Enabled = false;
             this.label14.Location = new System.Drawing.Point(84, 40);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(97, 13);
@@ -351,6 +451,7 @@ namespace MediaBazzarApplication.Presentation
             // 
             // cbxDep
             // 
+            this.cbxDep.Enabled = false;
             this.cbxDep.FormattingEnabled = true;
             this.cbxDep.Items.AddRange(new object[] {
             "HR",
@@ -377,7 +478,7 @@ namespace MediaBazzarApplication.Presentation
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(524, 94);
+            this.label18.Location = new System.Drawing.Point(524, 126);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(39, 13);
             this.label18.TabIndex = 0;
@@ -394,7 +495,7 @@ namespace MediaBazzarApplication.Presentation
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(372, 398);
+            this.btnRegister.Location = new System.Drawing.Point(369, 407);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(122, 36);
             this.btnRegister.TabIndex = 18;
@@ -422,21 +523,21 @@ namespace MediaBazzarApplication.Presentation
             // 
             // tbBsn
             // 
-            this.tbBsn.Location = new System.Drawing.Point(658, 163);
+            this.tbBsn.Location = new System.Drawing.Point(703, 125);
             this.tbBsn.Name = "tbBsn";
             this.tbBsn.Size = new System.Drawing.Size(100, 20);
             this.tbBsn.TabIndex = 13;
             // 
             // tbPhonenum
             // 
-            this.tbPhonenum.Location = new System.Drawing.Point(658, 88);
+            this.tbPhonenum.Location = new System.Drawing.Point(703, 88);
             this.tbPhonenum.Name = "tbPhonenum";
             this.tbPhonenum.Size = new System.Drawing.Size(100, 20);
             this.tbPhonenum.TabIndex = 12;
             // 
             // tbEmail
             // 
-            this.tbEmail.Location = new System.Drawing.Point(658, 19);
+            this.tbEmail.Location = new System.Drawing.Point(703, 19);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(100, 20);
             this.tbEmail.TabIndex = 11;
@@ -502,7 +603,7 @@ namespace MediaBazzarApplication.Presentation
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(573, 167);
+            this.label16.Location = new System.Drawing.Point(573, 129);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(32, 13);
             this.label16.TabIndex = 0;
@@ -618,6 +719,9 @@ namespace MediaBazzarApplication.Presentation
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.radioButton3);
+            this.tabPage3.Controls.Add(this.rbnAllContracts);
+            this.tabPage3.Controls.Add(this.radioButton1);
             this.tabPage3.Controls.Add(this.btnContractDetails);
             this.tabPage3.Controls.Add(this.btnTerminateContract);
             this.tabPage3.Controls.Add(this.btnAddContract);
@@ -629,19 +733,56 @@ namespace MediaBazzarApplication.Presentation
             this.tabPage3.Text = "Contracts";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(679, 29);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(126, 17);
+            this.radioButton3.TabIndex = 6;
+            this.radioButton3.Text = "Terminated Contracts";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            // 
+            // rbnAllContracts
+            // 
+            this.rbnAllContracts.AutoSize = true;
+            this.rbnAllContracts.Checked = true;
+            this.rbnAllContracts.Location = new System.Drawing.Point(80, 29);
+            this.rbnAllContracts.Name = "rbnAllContracts";
+            this.rbnAllContracts.Size = new System.Drawing.Size(84, 17);
+            this.rbnAllContracts.TabIndex = 5;
+            this.rbnAllContracts.TabStop = true;
+            this.rbnAllContracts.Text = "All Contracts";
+            this.rbnAllContracts.UseVisualStyleBackColor = true;
+            this.rbnAllContracts.CheckedChanged += new System.EventHandler(this.rbnAllContracts_CheckedChanged);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(369, 29);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(103, 17);
+            this.radioButton1.TabIndex = 4;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Active Contracts";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
             // btnContractDetails
             // 
-            this.btnContractDetails.Location = new System.Drawing.Point(332, 346);
+            this.btnContractDetails.Location = new System.Drawing.Point(332, 375);
             this.btnContractDetails.Name = "btnContractDetails";
             this.btnContractDetails.Size = new System.Drawing.Size(173, 68);
             this.btnContractDetails.TabIndex = 3;
             this.btnContractDetails.Text = "Contract Details";
             this.btnContractDetails.UseVisualStyleBackColor = true;
+            this.btnContractDetails.Visible = false;
             // 
             // btnTerminateContract
             // 
             this.btnTerminateContract.BackColor = System.Drawing.Color.Red;
-            this.btnTerminateContract.Location = new System.Drawing.Point(19, 342);
+            this.btnTerminateContract.Location = new System.Drawing.Point(19, 371);
             this.btnTerminateContract.Name = "btnTerminateContract";
             this.btnTerminateContract.Size = new System.Drawing.Size(146, 76);
             this.btnTerminateContract.TabIndex = 2;
@@ -652,7 +793,7 @@ namespace MediaBazzarApplication.Presentation
             // btnAddContract
             // 
             this.btnAddContract.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnAddContract.Location = new System.Drawing.Point(636, 346);
+            this.btnAddContract.Location = new System.Drawing.Point(636, 375);
             this.btnAddContract.Name = "btnAddContract";
             this.btnAddContract.Size = new System.Drawing.Size(201, 68);
             this.btnAddContract.TabIndex = 1;
@@ -663,7 +804,7 @@ namespace MediaBazzarApplication.Presentation
             // dgvContracts
             // 
             this.dgvContracts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvContracts.Location = new System.Drawing.Point(19, 18);
+            this.dgvContracts.Location = new System.Drawing.Point(19, 60);
             this.dgvContracts.Name = "dgvContracts";
             this.dgvContracts.Size = new System.Drawing.Size(818, 308);
             this.dgvContracts.TabIndex = 0;
@@ -677,7 +818,7 @@ namespace MediaBazzarApplication.Presentation
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
             this.Name = "EmployeeManagerPage";
-            this.Text = "1 ";
+            this.Text = "0";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -688,6 +829,7 @@ namespace MediaBazzarApplication.Presentation
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudWage)).EndInit();
             this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContracts)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -751,5 +893,16 @@ namespace MediaBazzarApplication.Presentation
         private System.Windows.Forms.Button btnTerminateContract;
         private System.Windows.Forms.Button btnAddContract;
         private System.Windows.Forms.DataGridView dgvContracts;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.ComboBox cbxDep2;
+        private System.Windows.Forms.DateTimePicker dtpStart;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.DateTimePicker dtpEnd;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.CheckBox chkContr;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton rbnAllContracts;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }
