@@ -30,26 +30,8 @@ namespace MediaBazzarApplication.Presentation
 
 
             PopulateComboboxes();
-            
             dtpStart.MinDate = DateTime.Today.AddDays(1);
-            StartDateNextMonthFirstDay();
-            dtpEnd.Value = dtpStart.Value.AddYears(1);
-            
 
-
-        }
-
-        public void StartDateNextMonthFirstDay()
-        {
-            if (DateTime.Today.Date.Day == 1)
-            {
-                return; 
-            }
-            else
-            {
-                DateTime dt = DateTime.Now;
-                dtpStart.Value = DateTime.Today.AddDays(-(dt.Day -1)).AddMonths(1);
-            }
 
         }
 
@@ -78,21 +60,10 @@ namespace MediaBazzarApplication.Presentation
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (cbxEmployee.SelectedItem is null)
+            if (cbxEmployee.SelectedItem is null || dtpStart.Value > dtpEnd.Value || cbxDept.SelectedItem is null
+                || cbxPosition.SelectedItem is null || cbxContType.SelectedItem is null)
             {
-                MessageBox.Show("Please select an employee first.");
-            }
-            else if (cbxDept.SelectedItem is null)
-            {
-                MessageBox.Show("Please select a department.");
-            }
-            else if (cbxPosition.SelectedItem is null)
-            {
-                MessageBox.Show("Select a position.");
-            }
-            else if (cbxContType.SelectedItem is null)
-            {
-                MessageBox.Show("Please select a contract type.");
+                MessageBox.Show("Please fill all the required fields.");
             }
             else
             {
@@ -114,7 +85,6 @@ namespace MediaBazzarApplication.Presentation
                 EmployeeManagerPage empage = new EmployeeManagerPage();
                 this.Hide();
                 empage.Show();
-                
 
 
             }
@@ -132,6 +102,16 @@ namespace MediaBazzarApplication.Presentation
             dtpStart.Enabled = true;
             employee = (Employee)cbxEmployee.SelectedItem;
             Department d = new Department();
+            cbxDept.Items.Clear();
+            foreach (Department department in ddb.GetDepartments())
+            {
+                if (department.DepartmentName == employee.DepartmentName)
+                {
+                    cbxDept.Items.Add(department);
+                }
+            }
+            cbxPosition.Items.Clear();
+            cbxPosition.Items.Add(employee.Position);
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)

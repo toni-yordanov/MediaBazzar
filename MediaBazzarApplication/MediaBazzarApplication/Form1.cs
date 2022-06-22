@@ -18,6 +18,28 @@ namespace MediaBazzarApplication
             InitializeComponent();
         }
 
+        private void btnShiftManager_Click(object sender, EventArgs e)
+        {
+            ShiftMakingForm smf = new ShiftMakingForm();
+            smf.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            StoreManager smm = new StoreManager();
+            smm.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            StockManager sm = new StockManager();
+            sm.ShowDialog();
+        }
+
+
+
+
         //private void button1_Click(object sender, EventArgs e)
         //{
         //    StockManager sk = new StockManager();

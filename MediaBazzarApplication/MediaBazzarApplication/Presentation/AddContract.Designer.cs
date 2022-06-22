@@ -32,9 +32,6 @@ namespace MediaBazzarApplication.Presentation
             this.btnBack = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rb3year = new System.Windows.Forms.RadioButton();
-            this.rb2year = new System.Windows.Forms.RadioButton();
-            this.rb1year = new System.Windows.Forms.RadioButton();
             this.cbxContType = new System.Windows.Forms.ComboBox();
             this.cbxPosition = new System.Windows.Forms.ComboBox();
             this.nudWage = new System.Windows.Forms.NumericUpDown();
@@ -50,6 +47,9 @@ namespace MediaBazzarApplication.Presentation
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.rb1year = new System.Windows.Forms.RadioButton();
+            this.rb2year = new System.Windows.Forms.RadioButton();
+            this.rb3year = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudWage)).BeginInit();
             this.SuspendLayout();
@@ -101,43 +101,9 @@ namespace MediaBazzarApplication.Presentation
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Contract Details";
             // 
-            // rb3year
-            // 
-            this.rb3year.AutoSize = true;
-            this.rb3year.Location = new System.Drawing.Point(237, 121);
-            this.rb3year.Name = "rb3year";
-            this.rb3year.Size = new System.Drawing.Size(54, 17);
-            this.rb3year.TabIndex = 6;
-            this.rb3year.Text = "3 year";
-            this.rb3year.UseVisualStyleBackColor = true;
-            this.rb3year.CheckedChanged += new System.EventHandler(this.rb3year_CheckedChanged);
-            // 
-            // rb2year
-            // 
-            this.rb2year.AutoSize = true;
-            this.rb2year.Location = new System.Drawing.Point(147, 121);
-            this.rb2year.Name = "rb2year";
-            this.rb2year.Size = new System.Drawing.Size(54, 17);
-            this.rb2year.TabIndex = 6;
-            this.rb2year.Text = "2 year";
-            this.rb2year.UseVisualStyleBackColor = true;
-            this.rb2year.CheckedChanged += new System.EventHandler(this.rb2year_CheckedChanged);
-            // 
-            // rb1year
-            // 
-            this.rb1year.AutoSize = true;
-            this.rb1year.Checked = true;
-            this.rb1year.Location = new System.Drawing.Point(56, 121);
-            this.rb1year.Name = "rb1year";
-            this.rb1year.Size = new System.Drawing.Size(54, 17);
-            this.rb1year.TabIndex = 6;
-            this.rb1year.TabStop = true;
-            this.rb1year.Text = "1 year";
-            this.rb1year.UseVisualStyleBackColor = true;
-            this.rb1year.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
             // cbxContType
             // 
+            this.cbxContType.Enabled = false;
             this.cbxContType.FormattingEnabled = true;
             this.cbxContType.Items.AddRange(new object[] {
             "full-time",
@@ -151,6 +117,7 @@ namespace MediaBazzarApplication.Presentation
             // 
             // cbxPosition
             // 
+            this.cbxPosition.Enabled = false;
             this.cbxPosition.FormattingEnabled = true;
             this.cbxPosition.Items.AddRange(new object[] {
             "General Manager",
@@ -165,6 +132,7 @@ namespace MediaBazzarApplication.Presentation
             // 
             // nudWage
             // 
+            this.nudWage.Enabled = false;
             this.nudWage.Increment = new decimal(new int[] {
             5,
             0,
@@ -188,6 +156,7 @@ namespace MediaBazzarApplication.Presentation
             // 
             // cbxDept
             // 
+            this.cbxDept.Enabled = false;
             this.cbxDept.FormattingEnabled = true;
             this.cbxDept.Location = new System.Drawing.Point(110, 172);
             this.cbxDept.Name = "cbxDept";
@@ -197,6 +166,7 @@ namespace MediaBazzarApplication.Presentation
             // 
             // dtpEnd
             // 
+            this.dtpEnd.Enabled = false;
             this.dtpEnd.Location = new System.Drawing.Point(110, 144);
             this.dtpEnd.MinDate = new System.DateTime(1753, 2, 6, 0, 0, 0, 0);
             this.dtpEnd.Name = "dtpEnd";
@@ -206,6 +176,7 @@ namespace MediaBazzarApplication.Presentation
             // 
             // dtpStart
             // 
+            this.dtpStart.Enabled = false;
             this.dtpStart.Location = new System.Drawing.Point(110, 82);
             this.dtpStart.MinDate = new System.DateTime(2022, 4, 20, 0, 0, 0, 0);
             this.dtpStart.Name = "dtpStart";
@@ -288,6 +259,7 @@ namespace MediaBazzarApplication.Presentation
             // 
             // btnAdd
             // 
+            this.btnAdd.Enabled = false;
             this.btnAdd.Location = new System.Drawing.Point(250, 396);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(111, 40);
@@ -295,6 +267,45 @@ namespace MediaBazzarApplication.Presentation
             this.btnAdd.Text = "Add Contract";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // rb1year
+            // 
+            this.rb1year.AutoSize = true;
+            this.rb1year.Enabled = false;
+            this.rb1year.Location = new System.Drawing.Point(56, 121);
+            this.rb1year.Name = "rb1year";
+            this.rb1year.Size = new System.Drawing.Size(54, 17);
+            this.rb1year.TabIndex = 6;
+            this.rb1year.TabStop = true;
+            this.rb1year.Text = "1 year";
+            this.rb1year.UseVisualStyleBackColor = true;
+            this.rb1year.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // rb2year
+            // 
+            this.rb2year.AutoSize = true;
+            this.rb2year.Enabled = false;
+            this.rb2year.Location = new System.Drawing.Point(147, 121);
+            this.rb2year.Name = "rb2year";
+            this.rb2year.Size = new System.Drawing.Size(54, 17);
+            this.rb2year.TabIndex = 6;
+            this.rb2year.TabStop = true;
+            this.rb2year.Text = "2 year";
+            this.rb2year.UseVisualStyleBackColor = true;
+            this.rb2year.CheckedChanged += new System.EventHandler(this.rb2year_CheckedChanged);
+            // 
+            // rb3year
+            // 
+            this.rb3year.AutoSize = true;
+            this.rb3year.Enabled = false;
+            this.rb3year.Location = new System.Drawing.Point(237, 121);
+            this.rb3year.Name = "rb3year";
+            this.rb3year.Size = new System.Drawing.Size(54, 17);
+            this.rb3year.TabIndex = 6;
+            this.rb3year.TabStop = true;
+            this.rb3year.Text = "3 year";
+            this.rb3year.UseVisualStyleBackColor = true;
+            this.rb3year.CheckedChanged += new System.EventHandler(this.rb3year_CheckedChanged);
             // 
             // AddContract
             // 

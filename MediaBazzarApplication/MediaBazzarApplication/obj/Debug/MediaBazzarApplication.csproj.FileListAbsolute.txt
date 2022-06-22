@@ -33,3 +33,197 @@ C:\Users\kaan0\mediabazzar-project-group4\MediaBazzarApplication\MediaBazzarAppl
 C:\Users\kaan0\mediabazzar-project-group4\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Presentation.DepartmentManager.resources
 C:\Users\kaan0\mediabazzar-project-group4\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Presentation.EmployeeManagerPage.resources
 C:\Users\kaan0\mediabazzar-project-group4\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Presentation.AddContract.resources
+C:\Users\alexp\OneDrive\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\MediaBazzarApplication.exe.config
+C:\Users\alexp\OneDrive\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\MediaBazzarApplication.exe
+C:\Users\alexp\OneDrive\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\MediaBazzarApplication.pdb
+C:\Users\alexp\OneDrive\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\alexp\OneDrive\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\Google.Protobuf.dll
+C:\Users\alexp\OneDrive\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\alexp\OneDrive\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\alexp\OneDrive\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\alexp\OneDrive\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\MySql.Data.dll
+C:\Users\alexp\OneDrive\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Buffers.dll
+C:\Users\alexp\OneDrive\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Memory.dll
+C:\Users\alexp\OneDrive\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\alexp\OneDrive\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\alexp\OneDrive\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\alexp\OneDrive\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\ZstdNet.dll
+C:\Users\alexp\OneDrive\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\Google.Protobuf.pdb
+C:\Users\alexp\OneDrive\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\Google.Protobuf.xml
+C:\Users\alexp\OneDrive\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\alexp\OneDrive\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\alexp\OneDrive\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\alexp\OneDrive\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\MySql.Data.xml
+C:\Users\alexp\OneDrive\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Buffers.xml
+C:\Users\alexp\OneDrive\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Memory.xml
+C:\Users\alexp\OneDrive\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\alexp\OneDrive\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\alexp\OneDrive\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.csproj.AssemblyReference.cache
+C:\Users\alexp\OneDrive\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Presentation.AddContract.resources
+C:\Users\alexp\OneDrive\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Presentation.DepartmentManager.resources
+C:\Users\alexp\OneDrive\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Presentation.EmployeeManagerPage.resources
+C:\Users\alexp\OneDrive\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Properties.Resources.resources
+C:\Users\alexp\OneDrive\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.ShiftMakingForm.resources
+C:\Users\alexp\OneDrive\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.csproj.GenerateResource.cache
+C:\Users\alexp\OneDrive\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.csproj.CoreCompileInputs.cache
+C:\Users\alexp\OneDrive\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.csproj.CopyComplete
+C:\Users\alexp\OneDrive\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.exe
+C:\Users\alexp\OneDrive\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.pdb
+C:\Users\alexp\OneDrive\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Form1.resources
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\MediaBazzarApplication.exe.config
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\MediaBazzarApplication.exe
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\MediaBazzarApplication.pdb
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\Google.Protobuf.dll
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\MySql.Data.dll
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Buffers.dll
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Memory.dll
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\ZstdNet.dll
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\Google.Protobuf.pdb
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\Google.Protobuf.xml
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\MySql.Data.xml
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Buffers.xml
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Memory.xml
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.csproj.AssemblyReference.cache
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.csproj.SuggestedBindingRedirects.cache
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Form1.resources
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Presentation.AddContract.resources
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Presentation.DepartmentManager.resources
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Presentation.EmployeeManagerPage.resources
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.ShiftMakingForm.resources
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Properties.Resources.resources
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.csproj.GenerateResource.cache
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.csproj.CoreCompileInputs.cache
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.csproj.CopyComplete
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.exe
+C:\Users\Anton\Desktop\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.pdb
+C:\Users\alexp\OneDrive\Desktop\Tonka updated\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\MediaBazzarApplication.exe.config
+C:\Users\alexp\OneDrive\Desktop\Tonka updated\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\MediaBazzarApplication.exe
+C:\Users\alexp\OneDrive\Desktop\Tonka updated\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\MediaBazzarApplication.pdb
+C:\Users\alexp\OneDrive\Desktop\Tonka updated\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\alexp\OneDrive\Desktop\Tonka updated\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\Google.Protobuf.dll
+C:\Users\alexp\OneDrive\Desktop\Tonka updated\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\alexp\OneDrive\Desktop\Tonka updated\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\alexp\OneDrive\Desktop\Tonka updated\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\alexp\OneDrive\Desktop\Tonka updated\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\MySql.Data.dll
+C:\Users\alexp\OneDrive\Desktop\Tonka updated\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Buffers.dll
+C:\Users\alexp\OneDrive\Desktop\Tonka updated\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Memory.dll
+C:\Users\alexp\OneDrive\Desktop\Tonka updated\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\alexp\OneDrive\Desktop\Tonka updated\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\alexp\OneDrive\Desktop\Tonka updated\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\alexp\OneDrive\Desktop\Tonka updated\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\ZstdNet.dll
+C:\Users\alexp\OneDrive\Desktop\Tonka updated\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\Google.Protobuf.pdb
+C:\Users\alexp\OneDrive\Desktop\Tonka updated\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\Google.Protobuf.xml
+C:\Users\alexp\OneDrive\Desktop\Tonka updated\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\alexp\OneDrive\Desktop\Tonka updated\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\alexp\OneDrive\Desktop\Tonka updated\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\alexp\OneDrive\Desktop\Tonka updated\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\MySql.Data.xml
+C:\Users\alexp\OneDrive\Desktop\Tonka updated\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Buffers.xml
+C:\Users\alexp\OneDrive\Desktop\Tonka updated\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Memory.xml
+C:\Users\alexp\OneDrive\Desktop\Tonka updated\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\alexp\OneDrive\Desktop\Tonka updated\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\alexp\OneDrive\Desktop\Tonka updated\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.csproj.AssemblyReference.cache
+C:\Users\alexp\OneDrive\Desktop\Tonka updated\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Form1.resources
+C:\Users\alexp\OneDrive\Desktop\Tonka updated\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Presentation.AddContract.resources
+C:\Users\alexp\OneDrive\Desktop\Tonka updated\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Presentation.DepartmentManager.resources
+C:\Users\alexp\OneDrive\Desktop\Tonka updated\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Presentation.EmployeeManagerPage.resources
+C:\Users\alexp\OneDrive\Desktop\Tonka updated\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.ShiftMakingForm.resources
+C:\Users\alexp\OneDrive\Desktop\Tonka updated\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Properties.Resources.resources
+C:\Users\alexp\OneDrive\Desktop\Tonka updated\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.csproj.GenerateResource.cache
+C:\Users\alexp\OneDrive\Desktop\Tonka updated\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.csproj.CoreCompileInputs.cache
+C:\Users\alexp\OneDrive\Desktop\Tonka updated\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.csproj.CopyComplete
+C:\Users\alexp\OneDrive\Desktop\Tonka updated\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.exe
+C:\Users\alexp\OneDrive\Desktop\Tonka updated\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.pdb
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.csproj.AssemblyReference.cache
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.csproj.SuggestedBindingRedirects.cache
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Form1.resources
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Presentation.AddContract.resources
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Presentation.DepartmentManager.resources
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Presentation.EmployeeManagerPage.resources
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.ShiftMakingForm.resources
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Properties.Resources.resources
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.csproj.GenerateResource.cache
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.csproj.CoreCompileInputs.cache
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.exe
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.pdb
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\MediaBazzarApplication.exe.config
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\MediaBazzarApplication.exe
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\MediaBazzarApplication.pdb
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\Google.Protobuf.dll
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\MySql.Data.dll
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Buffers.dll
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Memory.dll
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\ZstdNet.dll
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\Google.Protobuf.pdb
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\Google.Protobuf.xml
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\MySql.Data.xml
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Buffers.xml
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Memory.xml
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Anton\Downloads\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.csproj.CopyComplete
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\MediaBazzarApplication.exe.config
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\MediaBazzarApplication.exe
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\MediaBazzarApplication.pdb
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\Google.Protobuf.dll
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\MySql.Data.dll
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Buffers.dll
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Memory.dll
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\ZstdNet.dll
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\Google.Protobuf.pdb
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\Google.Protobuf.xml
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\MySql.Data.xml
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Buffers.xml
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Memory.xml
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.csproj.AssemblyReference.cache
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.csproj.SuggestedBindingRedirects.cache
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Form1.resources
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Presentation.AddContract.resources
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Presentation.AddProductsToShelf.resources
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Presentation.CreateProduct.resources
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Presentation.DepartmentManager.resources
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Presentation.EditProduct.resources
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Presentation.EmployeeManagerPage.resources
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.ShiftMakingForm.resources
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Presentation.StockManager.resources
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Presentation.StoreManager.resources
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Presentation.ViewProduct.resources
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Properties.Resources.resources
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.csproj.GenerateResource.cache
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.csproj.CoreCompileInputs.cache
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.csproj.CopyComplete
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.exe
+C:\Users\Hristo\Desktop\Finalna versia\mediabazzar-project-group4-main\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.pdb
