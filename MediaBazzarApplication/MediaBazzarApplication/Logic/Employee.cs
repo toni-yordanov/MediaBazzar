@@ -90,7 +90,29 @@ namespace MediaBazzarApplication
             this.DepartmentName = DepartmentName;
         }
 
-        
+        public Employee(int ID, string Firstname, string Lastname, string DateOfBirth,
+            string Gender, string BSN, string PhoneNumber, string Address,
+            string PostalCode, string Email, string City, string Country,
+            string Username, string Password, string DepartmentName, string position)
+        {
+            this.ID = ID;
+            this.Firstname = Firstname;
+            this.Lastname = Lastname;
+            this.DateOfBirth = DateOfBirth;
+            this.Gender = Gender;
+            this.BSN = BSN;
+            this.PhoneNumber = PhoneNumber;
+            this.Address = Address;
+            this.PostalCode = PostalCode;
+            this.Email = Email;
+            this.City = City;
+            this.Country = Country;
+            this.Username = Username;
+            this.Password = Password;
+            this.DepartmentName = DepartmentName;
+            this.Position = position;
+        }
+
 
         public Employee(int id, string firstname, string lastname, string Dateofbirth, string gender, string bsn, string phonenum, string address, string postalcode, string email, 
             string city, string country, string username)

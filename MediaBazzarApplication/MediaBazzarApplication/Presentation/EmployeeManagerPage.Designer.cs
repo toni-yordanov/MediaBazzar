@@ -34,7 +34,6 @@ namespace MediaBazzarApplication.Presentation
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnReset = new System.Windows.Forms.Button();
             this.cbxDepartment = new System.Windows.Forms.ComboBox();
-            this.tbID = new System.Windows.Forms.TextBox();
             this.tbName = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.rbnDepartment = new System.Windows.Forms.RadioButton();
@@ -95,6 +94,7 @@ namespace MediaBazzarApplication.Presentation
             this.btnTerminateContract = new System.Windows.Forms.Button();
             this.btnAddContract = new System.Windows.Forms.Button();
             this.dgvContracts = new System.Windows.Forms.DataGridView();
+            this.nudID = new System.Windows.Forms.NumericUpDown();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).BeginInit();
@@ -103,6 +103,7 @@ namespace MediaBazzarApplication.Presentation
             ((System.ComponentModel.ISupportInitialize)(this.nudWage)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContracts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudID)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -129,9 +130,9 @@ namespace MediaBazzarApplication.Presentation
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.nudID);
             this.tabPage1.Controls.Add(this.btnReset);
             this.tabPage1.Controls.Add(this.cbxDepartment);
-            this.tabPage1.Controls.Add(this.tbID);
             this.tabPage1.Controls.Add(this.tbName);
             this.tabPage1.Controls.Add(this.btnSearch);
             this.tabPage1.Controls.Add(this.rbnDepartment);
@@ -169,14 +170,6 @@ namespace MediaBazzarApplication.Presentation
             this.cbxDepartment.Name = "cbxDepartment";
             this.cbxDepartment.Size = new System.Drawing.Size(121, 21);
             this.cbxDepartment.TabIndex = 4;
-            // 
-            // tbID
-            // 
-            this.tbID.Enabled = false;
-            this.tbID.Location = new System.Drawing.Point(392, 20);
-            this.tbID.Name = "tbID";
-            this.tbID.Size = new System.Drawing.Size(100, 20);
-            this.tbID.TabIndex = 3;
             // 
             // tbName
             // 
@@ -809,6 +802,19 @@ namespace MediaBazzarApplication.Presentation
             this.dgvContracts.Size = new System.Drawing.Size(818, 308);
             this.dgvContracts.TabIndex = 0;
             // 
+            // nudID
+            // 
+            this.nudID.Enabled = false;
+            this.nudID.Location = new System.Drawing.Point(392, 21);
+            this.nudID.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.nudID.Name = "nudID";
+            this.nudID.Size = new System.Drawing.Size(81, 20);
+            this.nudID.TabIndex = 6;
+            // 
             // EmployeeManagerPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -831,6 +837,7 @@ namespace MediaBazzarApplication.Presentation
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContracts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudID)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -842,7 +849,6 @@ namespace MediaBazzarApplication.Presentation
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.ComboBox cbxDepartment;
-        private System.Windows.Forms.TextBox tbID;
         private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.RadioButton rbnDepartment;
@@ -904,5 +910,6 @@ namespace MediaBazzarApplication.Presentation
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton rbnAllContracts;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.NumericUpDown nudID;
     }
 }

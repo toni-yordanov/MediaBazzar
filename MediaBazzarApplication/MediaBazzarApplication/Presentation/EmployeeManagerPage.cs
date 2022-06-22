@@ -165,7 +165,7 @@ namespace MediaBazzarApplication.Presentation
 
 
                 rbnId.Checked = false;
-                tbID.Enabled = false;
+                nudID.Enabled = false;
 
 
                 rbnDepartment.Checked = false;
@@ -180,7 +180,7 @@ namespace MediaBazzarApplication.Presentation
 
 
                 rbnId.Checked = true;
-                tbID.Enabled = true;
+                nudID.Enabled = true;
 
 
                 rbnDepartment.Checked = false;
@@ -195,7 +195,7 @@ namespace MediaBazzarApplication.Presentation
 
 
                 rbnId.Checked = false;
-                tbID.Enabled = false;
+                nudID.Enabled = false;
 
 
                 rbnDepartment.Checked = true;
@@ -231,10 +231,10 @@ namespace MediaBazzarApplication.Presentation
             }
             else
             {
-                btnReset.Visible = true; 
+                
                 if (rbName.Checked)
                 {
-                    List <Employee> employees = edb.GetEmployeesbyName(tbName.Text);
+                    List <Employee> employees = edb.GetEmployeeByName(tbName.Text);
                     if (employees.Count == 0)
                     {
                         MessageBox.Show("We couldn't find anyone with this name.");
@@ -242,11 +242,12 @@ namespace MediaBazzarApplication.Presentation
                     else
                     {
                         dgvEmployees.DataSource = employees;
+                        btnReset.Visible = true;
                     }
                 }
                 else if (rbnId.Checked)
                 {
-                    List<Employee> employees = edb.GetEmployeesbyID(Convert.ToInt32(tbID.Text));
+                    List<Employee> employees = edb.GetEmployeeById(Convert.ToInt32(nudID.Value)); 
                     if (employees.Count == 0)
                     {
                         MessageBox.Show("We couldn't find anyone with this ID.");
@@ -254,11 +255,12 @@ namespace MediaBazzarApplication.Presentation
                     else
                     {
                         dgvEmployees.DataSource = employees;
+                        btnReset.Visible = true;
                     }
                 }
                 else
                 {
-                    List<Employee> employees = edb.GetEmployeesbyDepartment(cbxDepartment.SelectedItem.ToString());
+                    List<Employee> employees = edb.GetEmployeesbyDepartement(cbxDepartment.SelectedItem.ToString());
                     if (employees is null || employees.Count == 0)
                     {
                         MessageBox.Show("We couldn't find anyone with this Departmentname.");
@@ -266,6 +268,7 @@ namespace MediaBazzarApplication.Presentation
                     else
                     {
                         dgvEmployees.DataSource = employees;
+                        btnReset.Visible = true;
                     }
                 }
 
@@ -280,7 +283,7 @@ namespace MediaBazzarApplication.Presentation
         private void btnReset_Click(object sender, EventArgs e)
         {
             tbName.Text = "";
-            tbID.Text = "";
+            nudID.Text = "";
             cbxDepartment.Text = "";
             UpdateTables();
             btnReset.Visible = false; 

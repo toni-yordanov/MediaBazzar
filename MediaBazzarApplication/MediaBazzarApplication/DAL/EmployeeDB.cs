@@ -14,11 +14,14 @@ namespace MediaBazzarApplication.DAL
         public DataAccess conn;
         public Employee e;
 
+
+        public List<Employee> employees;
         public List<Contract> contracts; 
         public EmployeeDB()
         {
             conn = new DataAccess();
 
+            employees = new List<Employee>();
             contracts = new List<Contract>();
         }
 
@@ -155,33 +158,32 @@ namespace MediaBazzarApplication.DAL
                     {
                         //MessageBox.Show("Successfull");
                     }
-
-                    Employee emp = new Employee()
-                    {
-                        ID = Convert.ToInt32(reader["ID"]),
-                        Firstname = (reader["Firstname"]).ToString(),
-                        Lastname = (reader["Lastname"]).ToString(),
-                        DateOfBirth = (reader["Dateofbirth"]).ToString(),
-                        Gender = (reader["Gender"]).ToString(),
-                        BSN = (reader["BSN"]).ToString(),
-                        PhoneNumber = (reader["Phonenumber"]).ToString(),
-                        Address = (reader["Adress"]).ToString(),
-                        PostalCode = (reader["Postalcode"]).ToString(),
-                        Email = (reader["Email"]).ToString(),
-                        City = (reader["City"]).ToString(),
-                        Country = (reader["Country"]).ToString(),
-                        Username = (reader["Username"]).ToString(),
-                        DepartmentName = (reader["Departmentname"]).ToString(),
-                       
-                    };
+                    int ID = Convert.ToInt32(reader["ID"]);
+                    string Firstname = (reader["Firstname"]).ToString();
+                    string Lastname = (reader["Lastname"]).ToString();
+                    string DateOfBirth = (reader["Dateofbirth"]).ToString();
+                    string Gender = (reader["Gender"]).ToString();
+                    string BSN = (reader["BSN"]).ToString();
+                    string PhoneNumber = (reader["Phonenumber"]).ToString();
+                    string Address = (reader["Adress"]).ToString();
+                    string PostalCode = (reader["Postalcode"]).ToString();
+                    string Email = (reader["Email"]).ToString();
+                    string City = (reader["City"]).ToString();
+                    string Country = (reader["Country"]).ToString();
+                    string Username = (reader["Username"]).ToString();
+                    string DepartmentName = (reader["Departmentname"]).ToString();
+                    Employee emp = new Employee(ID,Firstname, Lastname, DateOfBirth, Gender, BSN, PhoneNumber, Address, PostalCode, Email, City, Country, Username, DepartmentName);
+                    
                     employees.Add(emp);
                 }
 
+                this.employees = employees;
                 return employees;
+
             }
             catch (Exception e)
             {
-                throw e;
+                return null;
             }
             finally
             {
@@ -189,7 +191,45 @@ namespace MediaBazzarApplication.DAL
             }
         }
 
+        public List<Employee> GetEmployeeByName(string name)
+        {
+            List<Employee> employeesbyname = new List<Employee>();
+            foreach (Employee employee in employees)
+            {
+                if (employee.Firstname == name)
+                {
+                    employeesbyname.Add(employee);
+                }
+            }
 
+            return employeesbyname;
+        }
+
+        public List<Employee> GetEmployeeById(int id)
+        {
+            List<Employee> employeesbyid = new List<Employee>();
+            foreach (Employee employee in employees)
+            {
+                if (employee.ID == id)
+                {
+                    employeesbyid.Add(employee);
+                }
+            }
+            return employeesbyid; 
+        }
+
+        public List<Employee> GetEmployeesbyDepartement(string depname)
+        {
+            List<Employee> employeesbydep = new List<Employee>();
+            foreach (Employee employee in employees)
+            {
+                if (employee.DepartmentName == depname)
+                {
+                    employeesbydep.Add(employee);
+                }
+            }
+            return employeesbydep;
+        }
 
         public List<Employee> GetEmployeesbyName(string name)
         {
