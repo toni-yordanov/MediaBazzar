@@ -29,33 +29,11 @@ namespace MediaBazzarApplication
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnStockManager = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.btnShiftManager = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btnStockManager
-            // 
-            this.btnStockManager.Location = new System.Drawing.Point(19, 108);
-            this.btnStockManager.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnStockManager.Name = "btnStockManager";
-            this.btnStockManager.Size = new System.Drawing.Size(118, 19);
-            this.btnStockManager.TabIndex = 0;
-            this.btnStockManager.Text = "Stock Manager";
-            this.btnStockManager.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(19, 132);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(118, 19);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "HR";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // btnShiftManager
             // 
@@ -110,8 +88,6 @@ namespace MediaBazzarApplication
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnShiftManager);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.btnStockManager);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -120,9 +96,6 @@ namespace MediaBazzarApplication
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnStockManager;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnShiftManager;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;

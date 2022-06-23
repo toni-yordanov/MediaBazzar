@@ -122,7 +122,7 @@ namespace MediaBazzarApplication.DAL
                     }
                    
 
-                      shifts.Add(shift);
+                    shifts.Add(shift);
                 }
                 
                 return shifts;

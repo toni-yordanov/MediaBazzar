@@ -44,6 +44,11 @@ namespace MediaBazzarApplication
             employeeManagerPage.Show();
         }
 
+        private void btnStockManager_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
 
 

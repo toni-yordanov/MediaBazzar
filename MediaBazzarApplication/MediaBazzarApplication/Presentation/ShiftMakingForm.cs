@@ -1149,8 +1149,9 @@ namespace MediaBazzarApplication
             UpdateShiftListbox();
             }
 
-        
-
-        
+        private void btnAutoShift_MouseHover(object sender, EventArgs e)
+        {
+            label37.Visible = true; 
+        }
     }
 }

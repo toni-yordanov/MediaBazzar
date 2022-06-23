@@ -15,7 +15,7 @@ namespace MediaBazzarApplication.DAL
         #region Employees
         public static readonly string AddEmployee = "INSERT INTO employees_prj(Firstname, Lastname, Dateofbirth, Gender, BSN, Phonenumber, Adress, Postalcode, Email, City, Country, Username, Password, Departmentname) VALUES (@name, @lastname, @dateofbirth, @gender, @bsn, @phone, @adress, @postalcode, @email, @city, @country, @username, @password, @depname)";
         public static readonly string GetEmployees = "SELECT ID, Firstname, Lastname, Dateofbirth, Gender, BSN, Phonenumber, Adress, Postalcode, Email, City, Country, Username, Departmentname FROM employees_prj";
-        public static readonly string GetEmployeeswithpassword = "SELECT ID, Firstname, Lastname, Dateofbirth, Gender, BSN, Phonenumber, Adress, Postalcode, Email, City, Country, Username, Departmentname, Position, Contracttype, Wage FROM employees_prj";
+        public static readonly string GetEmployeeswithpassword = "SELECT `ID`, `Firstname`, `Lastname`, `Dateofbirth`, `Gender`, `BSN`, `Phonenumber`, `Adress`, `Postalcode`, `Email`, `City`, `Country`, `Username`, `Password`, `Departmentname` FROM `employees_prj`";
 
         public static readonly string GetEmployeesbyName = "SELECT ID, Firstname, Lastname, Dateofbirth, Gender, BSN, Phonenumber, Adress, Postalcode, Email, City, Country, Username, Departmentname, Position, Contracttype, Wage FROM employees_prj WHERE Firstname = @name";
         public static readonly string GetEmployeesbyID = "SELECT ID, Firstname, Lastname, Dateofbirth, Gender, BSN, Phonenumber, Adress, Postalcode, Email, City, Country, Username, Departmentname FROM employees_prj WHERE ID = @id";
@@ -38,7 +38,8 @@ namespace MediaBazzarApplication.DAL
         public static readonly string GetContracts = "SELECT ContractID, EmployeeID, StartDate, EndDate, DepartmentName, Position, ContractType, Wage, Active FROM contracts_prj";
         public static readonly string GetContractswithId = "SELECT ContractID, EmployeeID, StartDate, EndDate, DepartmentName, Position, ContractType, Wage, Active FROM contracts_prj WHERE EmployeeID =  @id";
         public static readonly string GetSpesificContract = "SELECT ContractID, EmployeeID, StartDate, EndDate, DepartmentName, Position, ContractType, Wage, Active FROM contracts_prj WHERE ContractID = @id";
-        
+
+        public static readonly string GetContractsLogin = "SELECT EmployeeID, Position, FROM contracts_prj";
 
 
         #endregion

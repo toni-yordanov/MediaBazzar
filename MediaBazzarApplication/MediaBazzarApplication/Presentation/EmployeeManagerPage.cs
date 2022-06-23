@@ -55,42 +55,120 @@ namespace MediaBazzarApplication.Presentation
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            if (tbFirstname.Text == "" || tbLastname.Text == "" || tbUsername.Text == "" || cbxGender.SelectedItem is null || tbAdress.Text == "" || tbCity.Text == "" ||
-                tbCountry.Text == "" || tbPostCode.Text == "" || tbEmail.Text == "" || tbPhonenum.Text == "" || tbBsn.Text == ""
-                || cbxDep.SelectedItem is null || cbxPosition.SelectedItem is null)
+            // adding without contract 
+            if (cbxDep.SelectedItem is null || cbxPosition.SelectedItem is null || cbxContype.SelectedItem is null )
             {
-                MessageBox.Show("Please fill all the required fields first.");
+                DialogResult dialogResult = MessageBox.Show("Adding new employee", "Title", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes) // add employee without contract
+                {
+                    if (tbFirstname.Text == "" || tbLastname.Text == "" || tbUsername.Text == "" || cbxGender.SelectedItem is null || tbAdress.Text == "" || tbCity.Text == "" ||
+                tbCountry.Text == "" || tbPostCode.Text == "" || tbEmail.Text == "" || tbPhonenum.Text == "" || tbBsn.Text == ""
+                || cbxDep.SelectedItem is null)
+                    {
+                        MessageBox.Show("Please fill all the required fields first.");
+                    }
+                    else
+                    {
+                        string firstname = tbFirstname.Text;
+                        string lastname = tbLastname.Text;
+                        DateTime DateofBirth = Convert.ToDateTime(dtpBirth.Value);
+                        string username = tbUsername.Text;
+                        string password = tbPassword.Text;
+                        string gender = Convert.ToString(cbxGender.SelectedItem);
+                        string bsn = tbBsn.Text;
+                        string adress = tbAdress.Text;
+                        string city = tbCity.Text;
+                        string country = tbCountry.Text;
+                        string postalcode = tbPostCode.Text;
+                        string email = tbEmail.Text;
+                        string phonenum = tbPhonenum.Text;
+                        string departmentname = Convert.ToString(cbxDep.SelectedItem);
+                        string position = Convert.ToString(cbxPosition.SelectedItem);
+                        string contracttype = Convert.ToString(cbxContype.SelectedItem);
+                        double wage = Convert.ToDouble(nudWage.Value);
+
+
+
+                        edb.AddEmployee(firstname, lastname, DateofBirth, username, password,
+                            gender, bsn, adress, city, country, postalcode, email, phonenum,
+                            departmentname);
+
+
+                        MessageBox.Show($"Succesfully added {firstname} as {position} ");
+                        UpdateTables();
+                        tabPage1.Show();
+
+                    }
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    return;
+                }
             }
+
+            //adding employee with contract 
             else
             {
-                string firstname = tbFirstname.Text;
-                string lastname = tbLastname.Text;
-                DateTime DateofBirth = Convert.ToDateTime(dtpBirth.Value);
-                string username = tbUsername.Text;
-                string password = tbPassword.Text;
-                string gender = Convert.ToString(cbxGender.SelectedItem);
-                string bsn = tbBsn.Text;
-                string adress = tbAdress.Text;
-                string city = tbCity.Text;
-                string country = tbCountry.Text;
-                string postalcode = tbPostCode.Text;
-                string email = tbEmail.Text;
-                string phonenum = tbPhonenum.Text;
-                string departmentname = Convert.ToString(cbxDep.SelectedItem);
-                string position = Convert.ToString(cbxPosition.SelectedItem);
-                string contracttype = Convert.ToString(cbxContype.SelectedItem);
-                double wage = Convert.ToDouble(nudWage.Value);
+                DialogResult dialogResult = MessageBox.Show("Adding with contract", "Do you want to add employee with contract", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    if (tbFirstname.Text == "" || tbLastname.Text == "" || tbUsername.Text == "" || cbxGender.SelectedItem is null || tbAdress.Text == "" || tbCity.Text == "" ||
+                tbCountry.Text == "" || tbPostCode.Text == "" || tbEmail.Text == "" || tbPhonenum.Text == "" || tbBsn.Text == ""
+                || cbxDep.SelectedItem is null || cbxPosition.SelectedItem is null)
+                    {
+                        MessageBox.Show("Please fill all the required fields first.");
+                    }
+                    else
+                    {
+                        string firstname = tbFirstname.Text;
+                        string lastname = tbLastname.Text;
+                        DateTime DateofBirth = Convert.ToDateTime(dtpBirth.Value);
+                        string username = tbUsername.Text;
+                        string password = tbPassword.Text;
+                        string gender = Convert.ToString(cbxGender.SelectedItem);
+                        string bsn = tbBsn.Text;
+                        string adress = tbAdress.Text;
+                        string city = tbCity.Text;
+                        string country = tbCountry.Text;
+                        string postalcode = tbPostCode.Text;
+                        string email = tbEmail.Text;
+                        string phonenum = tbPhonenum.Text;
+                        string departmentname = Convert.ToString(cbxDep.SelectedItem);
+                        string position = Convert.ToString(cbxPosition.SelectedItem);
+                        string contracttype = Convert.ToString(cbxContype.SelectedItem);
+                        double wage = Convert.ToDouble(nudWage.Value);
 
 
 
-                edb.AddEmployee(firstname, lastname, DateofBirth, username, password,
-                    gender, bsn, adress, city, country, postalcode, email, phonenum,
-                    departmentname, position, contracttype, wage);
+                        edb.AddEmployee(firstname, lastname, DateofBirth, username, password,
+                            gender, bsn, adress, city, country, postalcode, email, phonenum,
+                            departmentname);
+                        List<Employee> newemployees = edb.GetEmployees();
+                        Employee emp = new Employee();
+                        foreach (Employee employee in newemployees)
+                        {
+                            if (employee.Firstname == firstname && employee.Lastname == lastname && employee.Username == username)
+                            {
+                                emp = employee;
+                            }
+                        }
+                        Contract c = new Contract(emp.ID, DateTime.Today, DateTime.Today.AddMonths(1), departmentname, position, contracttype, wage);
+                        edb.AddContract(c);
+                        
 
-                UpdateTables();
-                tabPage1.Show();
 
+                        MessageBox.Show($"Succesfully added {firstname} as {position}, with contract. ");
+                        UpdateTables();
+                        tabPage1.Show();
+
+                    }
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    return;  
+                }
             }
+            
         }
 
 
@@ -263,5 +341,12 @@ namespace MediaBazzarApplication.Presentation
         }
 
         #endregion
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login f1 = new Login();
+            f1.Show();
+        }
     }
 }

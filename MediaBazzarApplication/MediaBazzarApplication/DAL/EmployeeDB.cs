@@ -12,10 +12,12 @@ namespace MediaBazzarApplication.DAL
     {
         public DataAccess conn;
         public Employee e;
+        public List<Contract> contracts; 
 
         public EmployeeDB()
         {
             conn = new DataAccess();
+            contracts = GetContracts();
         }
 
 
@@ -24,8 +26,7 @@ namespace MediaBazzarApplication.DAL
         public void AddEmployee
             (string name, string lastname, DateTime birth, string username,
             string password, string gender, string bsn, string adress, string city, string country,
-            string postal, string email, string phone, string departmentname, string position,
-            string contracttype, double wage)
+            string postal, string email, string phone, string departmentname)
         {
             
             MySqlConnection databaseConnection = new MySqlConnection(conn.Databaseconnection);
@@ -75,7 +76,67 @@ namespace MediaBazzarApplication.DAL
 
         }
 
+        public List<Employee> GetEmployeesLogin()
+        {
+            MySqlConnection databaseConnection = new MySqlConnection(conn.Databaseconnection);
+            string GetEmployees = DBQueries.GetEmployeeswithpassword;
+            MySqlCommand commandDatabase = new MySqlCommand(GetEmployees, databaseConnection);
 
+            List<Employee> employees = new List<Employee>();
+            try
+            {
+                databaseConnection.Open();
+
+                MySqlDataReader reader = commandDatabase.ExecuteReader();
+                if (reader is null)
+                {
+                    return null;
+                }
+
+                while (reader.Read())
+                {
+                    if (reader.RecordsAffected > 0)
+                    {
+                        //MessageBox.Show("Successfull");
+                    }
+
+                    Employee emp = new Employee()
+                    {
+                        ID = Convert.ToInt32(reader["ID"]),
+                        Firstname = (reader["Firstname"]).ToString(),
+                        Lastname = (reader["Lastname"]).ToString(),
+                        DateOfBirth = (reader["Dateofbirth"]).ToString(),
+                        Gender = (reader["Gender"]).ToString(),
+                        BSN = (reader["BSN"]).ToString(),
+                        PhoneNumber = (reader["Phonenumber"]).ToString(),
+                        Address = (reader["Adress"]).ToString(),
+                        PostalCode = (reader["Postalcode"]).ToString(),
+                        Email = (reader["Email"]).ToString(),
+                        City = (reader["City"]).ToString(),
+                        Country = (reader["Country"]).ToString(),
+                        Username = (reader["Username"]).ToString(),
+                        Password = (reader["Password"]).ToString(),
+                        DepartmentName = (reader["Departmentname"]).ToString(),
+                        
+
+
+                    };
+                    employees.Add(emp);
+                }
+
+                return employees;
+            }
+            catch (Exception e)
+            {
+
+            }
+            finally
+            {
+                databaseConnection.Close();
+            }
+            return employees;
+        }
+        
         public List<Employee> GetEmployees()
         {
             MySqlConnection databaseConnection = new MySqlConnection(conn.Databaseconnection);
@@ -413,7 +474,7 @@ namespace MediaBazzarApplication.DAL
             }
             catch (Exception e)
             {
-                throw e; 
+                return null;  
             }
             finally
             {
