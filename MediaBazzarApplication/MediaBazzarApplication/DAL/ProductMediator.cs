@@ -74,7 +74,7 @@ namespace MediaBazzarApplication.DAL
                     " serialNumber = @serialNumber," +
                     " buyPrice = @buyPrice, sellprice = @sellprice," +
                     " threshold = @threshold,boxSize=@boxSize," +
-                    "productCategory =@productCategory,maxCapacity =@maxCapacity WHERE id = @id";
+                    "productCategory =@productCategory,maxCapacity =@maxCapacity , inStock = @inStock WHERE id = @id";
 
 
                 SqlQuery(query);
@@ -89,6 +89,7 @@ namespace MediaBazzarApplication.DAL
                 AddWithValue("@boxSize", product.boxSizes);
                 AddWithValue("@productCategory", product.ProductCategory);
                 AddWithValue("@maxCapacity", product.MaxCapacity);
+                AddWithValue("@inStock", product.InStock);
 
                 NonQueryEx();
 
@@ -135,6 +136,44 @@ namespace MediaBazzarApplication.DAL
             {
                 Close();
                 return null;
+            }
+        }
+        //This is for removing products from the main storage so it can be added to shelfes 
+        public void RemoveStock(int moved, int id)
+        {
+            if (ConnOpen())
+            {
+                query = "UPDATE `products_prj` SET `inStock` = `inStock`-@amount WHERE `id` = @id;";
+                SqlQuery(query);
+                AddWithValue("amount", moved);
+                AddWithValue("id", id);
+                NonQueryEx();
+
+                Close();
+
+            }
+            else
+            {
+                Close();
+            }
+        }
+        //This is for adding product to a shelf
+        public void AddStock(int moved, int id)
+        {
+            if (ConnOpen())
+            {
+                query = "UPDATE `products_prj` SET `inStock` = `inStock`+@amount WHERE `id` = @id;";
+                SqlQuery(query);
+                AddWithValue("amount", -moved);
+                AddWithValue("id", id);
+                NonQueryEx();
+
+                Close();
+
+            }
+            else
+            {
+                Close();
             }
         }
     }

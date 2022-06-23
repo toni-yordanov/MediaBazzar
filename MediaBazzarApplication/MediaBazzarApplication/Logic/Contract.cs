@@ -22,8 +22,6 @@ namespace MediaBazzarApplication.Logic
 
         public bool Active { get; set; }
 
-        public bool Terminated { get; set; }
-
 
         public Contract()
         {
