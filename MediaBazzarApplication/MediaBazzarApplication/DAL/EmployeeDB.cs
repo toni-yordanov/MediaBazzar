@@ -242,9 +242,10 @@ namespace MediaBazzarApplication.DAL
                         Country = (reader["Country"]).ToString(),
                         Username = (reader["Username"]).ToString(),
                         DepartmentName = (reader["Departmentname"]).ToString(),
+                        Position = reader["Position"].ToString(),
                         Contracttype = (reader["Contracttype"]).ToString(),
                         Wage = Convert.ToDouble(reader["Wage"]),
-
+                        
                     };
                     employees.Add(emp);
                 }
@@ -253,7 +254,7 @@ namespace MediaBazzarApplication.DAL
             }
             catch (Exception e)
             {
-                throw e;
+                return null; 
             }
             finally
             {
@@ -261,7 +262,19 @@ namespace MediaBazzarApplication.DAL
             }
         }
 
+        public List<Employee> GetEmployeesname (string name)
+        {
+            List<Employee> empllyees = new List<Employee>();
+            foreach (Employee employee in GetEmployees())
+            {
+                if (employee.Firstname == name)
+                {
+                    empllyees.Add(employee);
+                }
+            }
 
+            return empllyees;
+        }
 
 
         public List<Employee> GetEmployeesbyID(int id)
@@ -379,12 +392,26 @@ namespace MediaBazzarApplication.DAL
             }
             catch (Exception e)
             {
-                throw e;
+                return null; 
             }
             finally
             {
                 databaseConnection.Close();
             }
+        }
+
+        public List<Employee> GetEmployeesbydep(string depname)
+        {
+            List<Employee> employees = new List<Employee>();
+            foreach (Employee item in GetEmployees())
+            {
+                if (item.DepartmentName == depname)
+                {
+                    employees.Add(item);
+                }
+            }
+
+            return employees;
         }
         #endregion
 

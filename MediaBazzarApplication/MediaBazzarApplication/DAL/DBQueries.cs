@@ -19,7 +19,7 @@ namespace MediaBazzarApplication.DAL
 
         public static readonly string GetEmployeesbyName = "SELECT ID, Firstname, Lastname, Dateofbirth, Gender, BSN, Phonenumber, Adress, Postalcode, Email, City, Country, Username, Departmentname, Position, Contracttype, Wage FROM employees_prj WHERE Firstname = @name";
         public static readonly string GetEmployeesbyID = "SELECT ID, Firstname, Lastname, Dateofbirth, Gender, BSN, Phonenumber, Adress, Postalcode, Email, City, Country, Username, Departmentname FROM employees_prj WHERE ID = @id";
-        public static readonly string GetEmployeesbyDepartment = "SELECT ID, Firstname, Lastname, Dateofbirth, Gender, BSN, Phonenumber, Adress, Postalcode, Email, City, Country, Username, Departmentname, Position, Contracttype, Wage FROM employees_prj WHEREvvv Departmentname = @name";
+        public static readonly string GetEmployeesbyDepartment = "SELECT ID, Firstname, Lastname, Dateofbirth, Gender, BSN, Phonenumber, Adress, Postalcode, Email, City, Country, Username, Departmentname, Position, Contracttype, Wage FROM employees_prj WHERE Departmentname = @name";
 
 
 

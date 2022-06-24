@@ -254,7 +254,7 @@ namespace MediaBazzarApplication.Presentation
                 btnReset.Visible = true;
                 if (rbName.Checked)
                 {
-                    List<Employee> employees = edb.GetEmployeesbyName(tbName.Text);
+                    List<Employee> employees = edb.GetEmployeesname(tbName.Text);
                     if (employees.Count == 0)
                     {
                         MessageBox.Show("We couldn't find anyone with this name.");
@@ -278,7 +278,9 @@ namespace MediaBazzarApplication.Presentation
                 }
                 else
                 {
-                    List<Employee> employees = edb.GetEmployeesbyDepartment(cbxDepartment.SelectedItem.ToString());
+                    //List<Employee> employees = edb.GetEmployeesbyDepartment(cbxDepartment.SelectedItem.ToString());
+                    List<Employee> employees = edb.GetEmployeesbydep(cbxDepartment.SelectedItem.ToString());
+
                     if (employees is null || employees.Count == 0)
                     {
                         MessageBox.Show("We couldn't find anyone with this Departmentname.");

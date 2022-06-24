@@ -31,7 +31,7 @@ namespace MediaBazzarApplication.Presentation
 
             PopulateComboboxes();
             dtpStart.MinDate = DateTime.Today.AddDays(1);
-
+            StartDateNextMothFirstDay();
 
         }
 
@@ -97,6 +97,18 @@ namespace MediaBazzarApplication.Presentation
             emp.Show();
         }
 
+        public void StartDateNextMothFirstDay()
+        {
+            if (DateTime.Today.Date.Day == 1)
+            {
+                return; 
+            }
+            else
+            {
+                DateTime dt = DateTime.Now;
+                dtpStart.Value = DateTime.Today.AddDays(-(dt.Day - 1)).AddMonths(1);
+            }
+        }
         private void cbxEmployee_SelectedIndexChanged(object sender, EventArgs e)
         {
             dtpStart.Enabled = true;
@@ -110,8 +122,8 @@ namespace MediaBazzarApplication.Presentation
                     cbxDept.Items.Add(department);
                 }
             }
-            cbxPosition.Items.Clear();
-            cbxPosition.Items.Add(employee.Position);
+            //cbxPosition.Items.Clear();
+            //cbxPosition.Items.Add(employee.Position);
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
