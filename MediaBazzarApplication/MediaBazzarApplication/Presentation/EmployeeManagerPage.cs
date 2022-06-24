@@ -355,6 +355,8 @@ namespace MediaBazzarApplication.Presentation
         {
             DepartmentChangeRequest d = DepartmentChangeRequest();
             edb.EditRequest("Rejected", d.RequestID);
+            UpdateTables();
+
         }
 
         

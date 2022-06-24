@@ -18,7 +18,7 @@ namespace MediaBazzarApplication.Presentation
         private List<Employee> employees;
         private List<Contract> contracts;
         EmployeeDB edb;
-
+        private int trial = 0; 
         public Login()
         {
             InitializeComponent();
@@ -55,42 +55,76 @@ namespace MediaBazzarApplication.Presentation
                                     this.Hide();
                                     EmployeeManagerPage employeeManagerPage = new EmployeeManagerPage();
                                     employeeManagerPage.Show();
+                                    return;
                                 }
                                 else if (contract.Position == "Store Manager")
                                 {
                                     StoreManager storeManager = new StoreManager();
                                     storeManager.Show();
+                                    return;
                                 }
                                 else if (contract.Position == "Shift Manager")
                                 {
                                     this.Hide();
                                     ShiftMakingForm shiftManager = new ShiftMakingForm();
                                     shiftManager.Show();
+                                    return;
                                 }
                                 else if (contract.Position == "Department Manager")
                                 {
                                     this.Hide();
                                     DepartmentManager departmentManager = new DepartmentManager();
                                     departmentManager.Show();
+                                    return;
                                 }
                                 else if (contract.Position == "Stock Manager")
                                 {
                                     StockManager stockManager = new StockManager();
                                     stockManager.Show();
+                                    return;
+
                                 }
                                 else if (contract.Position == "Employee")
                                 {
                                     this.Hide();
                                     EmployeeForm employeeForm = new EmployeeForm(employee);
                                     employeeForm.Show();
+                                    return;
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Your position is not in correct format please contact support");
+                                    return;
                                 }
                             }
                         }
                         
                     }
+                    
                 }
+                
+                MessageBox.Show("Your username or password is wrong please try again.");
+                if (trial % 3 != 0 || trial == 0)
+                {
+                    trial++;
+                }
+                else
+                {
+                    MessageBox.Show($"Your tried logging in for {trial} times. You can try again later.");
+                    btnLogin.Enabled = false;
+                    Loginlock.Enabled = true;
+                    Loginlock.Start();
+                }
+                return;
+
             }
             
+        }
+
+        private void Loginlock_Tick(object sender, EventArgs e)
+        {
+            Loginlock.Interval = 20;
+            btnLogin.Enabled = true; 
         }
     }
 }

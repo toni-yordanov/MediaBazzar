@@ -29,11 +29,13 @@ namespace MediaBazzarApplication.Presentation
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.tbUsername = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.tbPassword = new System.Windows.Forms.TextBox();
+            this.Loginlock = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -78,6 +80,11 @@ namespace MediaBazzarApplication.Presentation
             this.tbPassword.Size = new System.Drawing.Size(100, 20);
             this.tbPassword.TabIndex = 4;
             // 
+            // Loginlock
+            // 
+            this.Loginlock.Interval = 10000;
+            this.Loginlock.Tick += new System.EventHandler(this.Loginlock_Tick);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -102,5 +109,6 @@ namespace MediaBazzarApplication.Presentation
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbPassword;
+        private System.Windows.Forms.Timer Loginlock;
     }
 }
