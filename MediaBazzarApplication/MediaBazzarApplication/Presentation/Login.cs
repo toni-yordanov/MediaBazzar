@@ -80,7 +80,9 @@ namespace MediaBazzarApplication.Presentation
                                 }
                                 else if (contract.Position == "Employee")
                                 {
-                                    // add employee form - department change request
+                                    this.Hide();
+                                    EmployeeForm employeeForm = new EmployeeForm(employee);
+                                    employeeForm.Show();
                                 }
                             }
                         }

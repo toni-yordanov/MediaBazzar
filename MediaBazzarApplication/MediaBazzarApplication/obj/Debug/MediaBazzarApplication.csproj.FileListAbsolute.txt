@@ -236,3 +236,4 @@ C:\Users\kaan0\mediabazzar-project-group4\MediaBazzarApplication\MediaBazzarAppl
 C:\Users\kaan0\mediabazzar-project-group4\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Presentation.StoreManager.resources
 C:\Users\kaan0\mediabazzar-project-group4\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Presentation.ViewProduct.resources
 C:\Users\kaan0\mediabazzar-project-group4\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Presentation.Login.resources
+C:\Users\kaan0\mediabazzar-project-group4\MediaBazzarApplication\MediaBazzarApplication\obj\Debug\MediaBazzarApplication.Presentation.EmployeeForm.resources

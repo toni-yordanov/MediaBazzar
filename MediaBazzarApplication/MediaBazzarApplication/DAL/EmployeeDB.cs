@@ -12,12 +12,14 @@ namespace MediaBazzarApplication.DAL
     {
         public DataAccess conn;
         public Employee e;
-        public List<Contract> contracts; 
+        public List<Contract> contracts;
+        public List<DepartmentChangeRequest> requests;
 
         public EmployeeDB()
         {
             conn = new DataAccess();
             contracts = GetContracts();
+            requests = GetDepartmentChangeRequests();
         }
 
 
@@ -539,6 +541,149 @@ namespace MediaBazzarApplication.DAL
 
 
 
+
+        #endregion
+
+        #region Department Change Request
+        public void AddRequest(DepartmentChangeRequest d)
+        {
+
+            MySqlConnection databaseConnection = new MySqlConnection(conn.Databaseconnection);
+            string addrequest = DBQueries.AddRequest;
+            MySqlCommand commandDatabase = new MySqlCommand(addrequest, databaseConnection);
+            try
+            {
+                commandDatabase.Parameters.AddWithValue("@name", d.EmployeeName);
+                commandDatabase.Parameters.AddWithValue("@id", d.EmployeeID);
+                commandDatabase.Parameters.AddWithValue("@past", d.PastDepartment);
+                commandDatabase.Parameters.AddWithValue("@request", d.RequestedDepartment);
+
+
+
+                databaseConnection.Open();
+                MySqlDataReader reader = commandDatabase.ExecuteReader();
+
+
+                if (reader is null)
+                {
+                    return;
+                }
+
+
+            }
+            catch (Exception e)
+            {
+
+                return; 
+
+            }
+            finally
+            {
+                databaseConnection.Close();
+            }
+
+
+        }
+        public void EditRequest(string status, int id)
+        {
+            MySqlConnection databaseConnection = new MySqlConnection(conn.Databaseconnection);
+            string updaterequest = DBQueries.UpdateRequest;
+            MySqlCommand commandDatabase = new MySqlCommand(updaterequest, databaseConnection);
+            try
+            {
+                commandDatabase.Parameters.AddWithValue("@status", status);
+                commandDatabase.Parameters.AddWithValue("@id", id);
+
+
+
+
+
+                databaseConnection.Open();
+                MySqlDataReader reader = commandDatabase.ExecuteReader();
+
+
+                if (reader is null)
+                {
+                    return;
+                }
+
+
+            }
+            catch (Exception e)
+            {
+
+                return;
+
+            }
+            finally
+            {
+                databaseConnection.Close();
+            }
+        }
+        public DepartmentChangeRequest Getrequest(int id)
+        {
+            DepartmentChangeRequest d = new DepartmentChangeRequest();
+            foreach (DepartmentChangeRequest item in requests)
+            {
+                if (item.RequestID == id)
+                {
+                    d = item;  
+                }
+            }
+            return d; 
+
+        }
+        public List<DepartmentChangeRequest> GetDepartmentChangeRequests()
+        {
+            
+            MySqlConnection databaseConnection = new MySqlConnection(conn.Databaseconnection);
+            string GetRequests = DBQueries.GetRequests;
+            MySqlCommand commandDatabase = new MySqlCommand(GetRequests, databaseConnection);
+
+            List<DepartmentChangeRequest> requests = new List<DepartmentChangeRequest>();
+            try
+            {
+                databaseConnection.Open();
+
+                MySqlDataReader reader = commandDatabase.ExecuteReader();
+                if (reader is null)
+                {
+                    return null;
+                }
+
+                while (reader.Read())
+                {
+                    if (reader.RecordsAffected > 0)
+                    {
+                        //MessageBox.Show("Successfull");
+                    }
+                    int requestid = Convert.ToInt32(reader[0]);
+                    string name = reader[1].ToString();
+                    int id = Convert.ToInt32(reader[2]);
+                    string pastname = reader[3].ToString();
+                    string requestedname = reader[4].ToString();
+                    string status = reader[5].ToString();
+
+
+                    DepartmentChangeRequest d = new DepartmentChangeRequest(requestid, name, id, pastname, requestedname, status);
+
+
+                    requests.Add(d);
+                }
+
+                this.requests = requests;
+                return requests;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+            finally
+            {
+                databaseConnection.Close();
+            }
+            
+        }
 
         #endregion
 

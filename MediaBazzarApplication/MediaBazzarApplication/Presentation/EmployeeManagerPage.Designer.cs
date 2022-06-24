@@ -47,14 +47,14 @@ namespace MediaBazzarApplication.Presentation
             this.nudWage = new System.Windows.Forms.NumericUpDown();
             this.label17 = new System.Windows.Forms.Label();
             this.cbxContype = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.cbxDep = new System.Windows.Forms.ComboBox();
             this.cbxPosition = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.btnRegister = new System.Windows.Forms.Button();
             this.cbxGender = new System.Windows.Forms.ComboBox();
             this.dtpBirth = new System.Windows.Forms.DateTimePicker();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cbxDep = new System.Windows.Forms.ComboBox();
             this.tbBsn = new System.Windows.Forms.TextBox();
             this.tbPhonenum = new System.Windows.Forms.TextBox();
             this.tbEmail = new System.Windows.Forms.TextBox();
@@ -85,6 +85,10 @@ namespace MediaBazzarApplication.Presentation
             this.btnAddContract = new System.Windows.Forms.Button();
             this.dgvContracts = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.btnDecline = new System.Windows.Forms.Button();
+            this.btnAccept = new System.Windows.Forms.Button();
+            this.dgvRequests = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).BeginInit();
@@ -93,6 +97,8 @@ namespace MediaBazzarApplication.Presentation
             ((System.ComponentModel.ISupportInitialize)(this.nudWage)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContracts)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRequests)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -111,6 +117,7 @@ namespace MediaBazzarApplication.Presentation
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(3, 36);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -130,7 +137,7 @@ namespace MediaBazzarApplication.Presentation
             this.tabPage1.Controls.Add(this.dgvEmployees);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(859, 449);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Management";
@@ -265,7 +272,7 @@ namespace MediaBazzarApplication.Presentation
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(859, 449);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Register";
@@ -342,27 +349,6 @@ namespace MediaBazzarApplication.Presentation
             this.cbxContype.Size = new System.Drawing.Size(107, 21);
             this.cbxContype.TabIndex = 16;
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(556, 170);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(97, 13);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "Department name :";
-            // 
-            // cbxDep
-            // 
-            this.cbxDep.FormattingEnabled = true;
-            this.cbxDep.Items.AddRange(new object[] {
-            "HR",
-            "Sales",
-            "Depot"});
-            this.cbxDep.Location = new System.Drawing.Point(658, 164);
-            this.cbxDep.Name = "cbxDep";
-            this.cbxDep.Size = new System.Drawing.Size(107, 21);
-            this.cbxDep.TabIndex = 14;
-            // 
             // cbxPosition
             // 
             this.cbxPosition.FormattingEnabled = true;
@@ -423,6 +409,27 @@ namespace MediaBazzarApplication.Presentation
             this.dtpBirth.Name = "dtpBirth";
             this.dtpBirth.Size = new System.Drawing.Size(123, 20);
             this.dtpBirth.TabIndex = 3;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(556, 170);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(97, 13);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Department name :";
+            // 
+            // cbxDep
+            // 
+            this.cbxDep.FormattingEnabled = true;
+            this.cbxDep.Items.AddRange(new object[] {
+            "HR",
+            "Sales",
+            "Depot"});
+            this.cbxDep.Location = new System.Drawing.Point(658, 164);
+            this.cbxDep.Name = "cbxDep";
+            this.cbxDep.Size = new System.Drawing.Size(107, 21);
+            this.cbxDep.TabIndex = 14;
             // 
             // tbBsn
             // 
@@ -683,6 +690,48 @@ namespace MediaBazzarApplication.Presentation
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.dgvRequests);
+            this.tabPage4.Controls.Add(this.btnAccept);
+            this.tabPage4.Controls.Add(this.btnDecline);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(859, 449);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Department Change Requests";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // btnDecline
+            // 
+            this.btnDecline.BackColor = System.Drawing.Color.Red;
+            this.btnDecline.Location = new System.Drawing.Point(110, 378);
+            this.btnDecline.Name = "btnDecline";
+            this.btnDecline.Size = new System.Drawing.Size(163, 59);
+            this.btnDecline.TabIndex = 0;
+            this.btnDecline.Text = "Decline";
+            this.btnDecline.UseVisualStyleBackColor = false;
+            this.btnDecline.Click += new System.EventHandler(this.btnDecline_Click);
+            // 
+            // btnAccept
+            // 
+            this.btnAccept.BackColor = System.Drawing.Color.LawnGreen;
+            this.btnAccept.Location = new System.Drawing.Point(599, 378);
+            this.btnAccept.Name = "btnAccept";
+            this.btnAccept.Size = new System.Drawing.Size(163, 59);
+            this.btnAccept.TabIndex = 1;
+            this.btnAccept.Text = "Accept";
+            this.btnAccept.UseVisualStyleBackColor = false;
+            this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
+            // 
+            // dgvRequests
+            // 
+            this.dgvRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRequests.Location = new System.Drawing.Point(18, 18);
+            this.dgvRequests.Name = "dgvRequests";
+            this.dgvRequests.Size = new System.Drawing.Size(819, 354);
+            this.dgvRequests.TabIndex = 2;
+            // 
             // EmployeeManagerPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -693,7 +742,7 @@ namespace MediaBazzarApplication.Presentation
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
             this.Name = "EmployeeManagerPage";
-            this.Text = "1 ";
+            this.Text = "Employee Manager";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -705,6 +754,8 @@ namespace MediaBazzarApplication.Presentation
             ((System.ComponentModel.ISupportInitialize)(this.nudWage)).EndInit();
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvContracts)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRequests)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -768,5 +819,9 @@ namespace MediaBazzarApplication.Presentation
         private System.Windows.Forms.Button btnAddContract;
         private System.Windows.Forms.DataGridView dgvContracts;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.DataGridView dgvRequests;
+        private System.Windows.Forms.Button btnAccept;
+        private System.Windows.Forms.Button btnDecline;
     }
 }

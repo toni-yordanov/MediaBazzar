@@ -49,6 +49,8 @@ namespace MediaBazzarApplication.Presentation
             dgvContracts.DataSource = edb.GetContracts();
             ColorGradeContracts();
 
+            dgvRequests.DataSource = edb.GetDepartmentChangeRequests(); 
+
         }
 
 
@@ -347,6 +349,29 @@ namespace MediaBazzarApplication.Presentation
             this.Hide();
             Login f1 = new Login();
             f1.Show();
+        }
+
+        private void btnDecline_Click(object sender, EventArgs e)
+        {
+            DepartmentChangeRequest d = DepartmentChangeRequest();
+            edb.EditRequest("Rejected", d.RequestID);
+        }
+
+        
+
+        private DepartmentChangeRequest DepartmentChangeRequest()
+        {
+            int selectedrowindex = this.dgvRequests.SelectedCells[0].RowIndex;
+            DataGridViewRow selected = this.dgvRequests.Rows[selectedrowindex];
+            DepartmentChangeRequest req = this.edb.Getrequest(Convert.ToInt32(selected.Cells["RequestID"].Value));
+
+            return req;
+        }
+
+        private void btnAccept_Click(object sender, EventArgs e)
+        {
+            DepartmentChangeRequest d = DepartmentChangeRequest();
+            edb.EditRequest("Accepted", d.RequestID);
         }
     }
 }

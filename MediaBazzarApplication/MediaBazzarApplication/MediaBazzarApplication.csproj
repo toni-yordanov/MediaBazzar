@@ -102,6 +102,7 @@
     <Compile Include="Logic\BoxSizes.cs" />
     <Compile Include="Logic\Contract.cs" />
     <Compile Include="Logic\Department.cs" />
+    <Compile Include="Logic\DepartmentChangeRequest.cs" />
     <Compile Include="Logic\Employee.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -148,6 +149,12 @@
     </Compile>
     <Compile Include="Presentation\EditProduct.Designer.cs">
       <DependentUpon>EditProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\EmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\EmployeeForm.Designer.cs">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\EmployeeManagerPage.cs">
       <SubType>Form</SubType>
@@ -205,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\EditProduct.resx">
       <DependentUpon>EditProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\EmployeeForm.resx">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\EmployeeManagerPage.resx">
       <DependentUpon>EmployeeManagerPage.cs</DependentUpon>

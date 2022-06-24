@@ -61,6 +61,17 @@ namespace MediaBazzarApplication.DAL
         public static readonly string RemoveShift = "DELETE  FROM emp_shift_relation_prj WHERE id = @id ";
         #endregion
 
+        //department change requests 
+        #region Department Change Request
+
+        public static readonly string AddRequest = "INSERT INTO `departmentchangerequest`( `EmployeeName`, `EmployeeID`, `PastDepartment`, `RequestedDepartment`, `Status`) " +
+            "                                                                           VALUES (@name, @id, @past, @request ,'Unanswered')";
+        public static readonly string UpdateRequest = "UPDATE `departmentchangerequest` SET `Status`= @status WHERE `EmployeeID` = @id";
+        public static readonly string GetRequests = "SELECT `RequestID`, `EmployeeName`, `EmployeeID`, `PastDepartment`, `RequestedDepartment`, `Status` FROM `departmentchangerequest`"; 
+
+
+
+        #endregion
 
 
     }
